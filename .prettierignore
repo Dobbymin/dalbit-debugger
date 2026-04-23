@@ -1,0 +1,18 @@
+# node_modules 폴더는 기본적으로 무시되지만, 명시적으로 추가
+node_modules
+
+# 빌드된 파일과 관련 폴더 무시
+dist
+public
+
+# 환경설정 파일 무시
+*.lock
+# *.config.js
+# *.config.ts
+# *.config.mjs
+*.md
+package-lock.json
+
+.omc
+test-results
+playwright-report
