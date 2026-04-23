@@ -1,0 +1,218 @@
+{
+  "version": "1.0.0",
+  "lastScanned": 1776945370337,
+  "projectRoot": "/Users/gimgangmin/Desktop/Dev/homework/dalbit-debugger-demo",
+  "techStack": {
+    "languages": [
+      {
+        "name": "JavaScript/TypeScript",
+        "version": null,
+        "confidence": "high",
+        "markers": [
+          "package.json"
+        ]
+      },
+      {
+        "name": "TypeScript",
+        "version": null,
+        "confidence": "high",
+        "markers": [
+          "tsconfig.json"
+        ]
+      }
+    ],
+    "frameworks": [
+      {
+        "name": "react",
+        "version": "19.2.5",
+        "category": "frontend"
+      },
+      {
+        "name": "react-dom",
+        "version": "19.2.5",
+        "category": "frontend"
+      },
+      {
+        "name": "vite",
+        "version": "8.0.10",
+        "category": "build"
+      }
+    ],
+    "packageManager": "pnpm",
+    "runtime": null
+  },
+  "build": {
+    "buildCommand": "pnpm build",
+    "testCommand": null,
+    "lintCommand": "pnpm lint",
+    "devCommand": "pnpm dev",
+    "scripts": {
+      "dev": "vite",
+      "build": "tsc -b && vite build",
+      "lint": "eslint --cache .",
+      "lint:fix": "eslint --cache --fix .",
+      "tsc": "tsc --noEmit",
+      "format": "prettier --write .",
+      "generate:icons": "node script/generate-icons.mjs",
+      "preview": "vite preview",
+      "prepare": "husky"
+    }
+  },
+  "conventions": {
+    "namingStyle": null,
+    "importStyle": null,
+    "testPattern": null,
+    "fileOrganization": "feature-based"
+  },
+  "structure": {
+    "isMonorepo": false,
+    "workspaces": [],
+    "mainDirectories": [
+      "docs",
+      "public",
+      "src"
+    ],
+    "gitBranches": null
+  },
+  "customNotes": [],
+  "directoryMap": {
+    "docs": {
+      "path": "docs",
+      "purpose": "Documentation",
+      "fileCount": 0,
+      "lastAccessed": 1776945370234,
+      "keyFiles": []
+    },
+    "public": {
+      "path": "public",
+      "purpose": "Public files",
+      "fileCount": 2,
+      "lastAccessed": 1776945370234,
+      "keyFiles": [
+        "favicon.svg",
+        "icons.svg"
+      ]
+    },
+    "script": {
+      "path": "script",
+      "purpose": null,
+      "fileCount": 1,
+      "lastAccessed": 1776945370241,
+      "keyFiles": [
+        "generate-icons.mjs"
+      ]
+    },
+    "src": {
+      "path": "src",
+      "purpose": "Source code",
+      "fileCount": 4,
+      "lastAccessed": 1776945370242,
+      "keyFiles": [
+        "App.css",
+        "App.tsx",
+        "index.css",
+        "main.tsx"
+      ]
+    },
+    "src/app": {
+      "path": "src/app",
+      "purpose": "Application code",
+      "fileCount": 0,
+      "lastAccessed": 1776945370244,
+      "keyFiles": []
+    },
+    "src/assets": {
+      "path": "src/assets",
+      "purpose": "Static assets",
+      "fileCount": 3,
+      "lastAccessed": 1776945370244,
+      "keyFiles": [
+        "hero.png",
+        "react.svg",
+        "vite.svg"
+      ]
+    },
+    "src/pages": {
+      "path": "src/pages",
+      "purpose": "Page components",
+      "fileCount": 0,
+      "lastAccessed": 1776945370244,
+      "keyFiles": []
+    }
+  },
+  "hotPaths": [
+    {
+      "path": "docs/common/prd.md",
+      "accessCount": 20,
+      "lastAccessed": 1776950788953,
+      "type": "file"
+    },
+    {
+      "path": "docs/rule/fsd-rule.md",
+      "accessCount": 13,
+      "lastAccessed": 1776950850407,
+      "type": "file"
+    },
+    {
+      "path": "CLAUDE.md",
+      "accessCount": 8,
+      "lastAccessed": 1776950788796,
+      "type": "file"
+    },
+    {
+      "path": "src/pages/main/MainPage.tsx",
+      "accessCount": 3,
+      "lastAccessed": 1776949431451,
+      "type": "file"
+    },
+    {
+      "path": "src/app/routes/Routes.tsx",
+      "accessCount": 2,
+      "lastAccessed": 1776948958492,
+      "type": "file"
+    },
+    {
+      "path": "src/pages/examples/ExamplesPage.tsx",
+      "accessCount": 2,
+      "lastAccessed": 1776949432045,
+      "type": "file"
+    },
+    {
+      "path": "src/pages/debugger/DebuggerPage.tsx",
+      "accessCount": 2,
+      "lastAccessed": 1776949432148,
+      "type": "file"
+    },
+    {
+      "path": "docs/rule/project-rule.md",
+      "accessCount": 1,
+      "lastAccessed": 1776945556699,
+      "type": "file"
+    },
+    {
+      "path": "docs/rule/hooks-rule.md",
+      "accessCount": 1,
+      "lastAccessed": 1776945557491,
+      "type": "file"
+    },
+    {
+      "path": "src/shared/constants/route-path.ts",
+      "accessCount": 1,
+      "lastAccessed": 1776947618583,
+      "type": "file"
+    },
+    {
+      "path": "src/widgets/layouts/ui/RootLayout.tsx",
+      "accessCount": 1,
+      "lastAccessed": 1776949432288,
+      "type": "file"
+    },
+    {
+      "path": "src/pages/main/index.ts",
+      "accessCount": 1,
+      "lastAccessed": 1776950176511,
+      "type": "file"
+    }
+  ],
+  "userDirectives": []
+}
