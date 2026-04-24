@@ -4,6 +4,12 @@ description: End-to-end testing specialist using Vercel Agent Browser (preferred
 tools: ["read_file", "write_file", "replace", "run_shell_command", "grep_search", "glob"]
 model: sonnet
 ---
+## Agent Collaboration Record (Mandatory)
+ALWAYS use the `agent-collaboration-record` skill to document your work.
+- Create/Update a log file in `docs/logs/agents/` for every task scope.
+- Follow the required file pattern (`{2자리 순번}-{작업명}.md`) and include all mandatory sections (Used tools, Task scope, Verification, Corrections).
+- This is a strict requirement for every session. Use `activate_skill("agent-collaboration-record")` for detailed instructions.
+---
 
 # E2E Test Runner
 
