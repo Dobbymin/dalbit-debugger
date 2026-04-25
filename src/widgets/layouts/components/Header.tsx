@@ -13,9 +13,12 @@ import {
 import { css, cx } from "../../../../styled-system/css";
 import { icon } from "../../../../styled-system/recipes";
 
-type ActiveTab = "Debugger" | "Library" | "Documentation";
+type ActiveTab = "Debugger" | "Library";
 
-const NAV_TABS: ActiveTab[] = ["Debugger", "Library", "Documentation"];
+const NAV_TABS: { label: ActiveTab; path: string }[] = [
+  { label: "Debugger", path: ROUTE_PATHS.DEBUGGER },
+  { label: "Library", path: ROUTE_PATHS.EXAMPLES },
+];
 
 const ICON_ACTIONS = [
   { label: "설정", Icon: SettingsIcon },
@@ -62,26 +65,25 @@ export const Header = ({ activeTab = "Debugger", sticky = false, showSearch = fa
           })}
         >
           {NAV_TABS.map((tab) => (
-            <button
-              key={tab}
-              type="button"
+            <Link
+              key={tab.label}
+              to={tab.path}
               className={css({
-                border: "none",
-                borderBottomWidth: tab === activeTab ? "2px" : "0",
+                borderBottomWidth: "2px",
                 borderBottomStyle: "solid",
-                borderBottomColor: "primaryContainer",
-                backgroundColor: "transparent",
-                color: tab === activeTab ? "primaryContainer" : "onSurfaceVariant",
+                borderBottomColor: tab.label === activeTab ? "primaryContainer" : "transparent",
+                color: tab.label === activeTab ? "primaryContainer" : "onSurfaceVariant",
                 fontFamily: "code",
                 fontSize: "12px",
                 paddingBottom: "4px",
-                cursor: "pointer",
-                transition: "color 180ms ease",
-                _hover: { color: "primaryContainer" },
+                textDecoration: "none",
+                whiteSpace: "nowrap",
+                transition: "color 180ms ease, border-color 180ms ease",
+                _hover: { color: "primaryContainer", borderBottomColor: "primaryContainer" },
               })}
             >
-              {tab}
-            </button>
+              {tab.label}
+            </Link>
           ))}
         </nav>
       </div>
@@ -124,28 +126,6 @@ export const Header = ({ activeTab = "Debugger", sticky = false, showSearch = fa
             <span>Search examples...</span>
           </div>
         )}
-
-        <Link
-          to={ROUTE_PATHS.DEBUGGER}
-          className={css({
-            display: { base: "none", sm: "inline-flex" },
-            alignItems: "center",
-            justifyContent: "center",
-            height: "32px",
-            paddingX: "10px",
-            borderRadius: "DEFAULT",
-            backgroundColor: "primaryContainer",
-            color: "onPrimary",
-            textDecoration: "none",
-            fontFamily: "code",
-            fontSize: "11px",
-            whiteSpace: "nowrap",
-            transition: "background-color 180ms ease",
-            _hover: { backgroundColor: "primary" },
-          })}
-        >
-          Start Debugging
-        </Link>
 
         {ICON_ACTIONS.map((item) => (
           <button
