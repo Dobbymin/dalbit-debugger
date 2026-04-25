@@ -1,7 +1,7 @@
 {
   "version": "1.0.0",
-  "lastScanned": 1776945370337,
-  "projectRoot": "/Users/gimgangmin/Desktop/Dev/homework/dalbit-debugger-demo",
+  "lastScanned": 1777123577308,
+  "projectRoot": "/Users/gimgangmin/Desktop/Dev/homework/dalbit-debugger",
   "techStack": {
     "languages": [
       {
@@ -55,6 +55,7 @@
       "format": "prettier --write .",
       "generate:icons": "node script/generate-icons.mjs",
       "preview": "vite preview",
+      "prepare-panda": "panda codegen && panda cssgen",
       "prepare": "husky"
     }
   },
@@ -72,22 +73,32 @@
       "public",
       "src"
     ],
-    "gitBranches": null
+    "gitBranches": {
+      "defaultBranch": "main",
+      "branchingStrategy": null
+    }
   },
   "customNotes": [],
   "directoryMap": {
+    "chat": {
+      "path": "chat",
+      "purpose": null,
+      "fileCount": 0,
+      "lastAccessed": 1777123577290,
+      "keyFiles": []
+    },
     "docs": {
       "path": "docs",
       "purpose": "Documentation",
       "fileCount": 0,
-      "lastAccessed": 1776945370234,
+      "lastAccessed": 1777123577290,
       "keyFiles": []
     },
     "public": {
       "path": "public",
       "purpose": "Public files",
       "fileCount": 2,
-      "lastAccessed": 1776945370234,
+      "lastAccessed": 1777123577291,
       "keyFiles": [
         "favicon.svg",
         "icons.svg"
@@ -97,7 +108,7 @@
       "path": "script",
       "purpose": null,
       "fileCount": 1,
-      "lastAccessed": 1776945370241,
+      "lastAccessed": 1777123577291,
       "keyFiles": [
         "generate-icons.mjs"
       ]
@@ -106,7 +117,7 @@
       "path": "src",
       "purpose": "Source code",
       "fileCount": 4,
-      "lastAccessed": 1776945370242,
+      "lastAccessed": 1777123577291,
       "keyFiles": [
         "App.css",
         "App.tsx",
@@ -114,30 +125,44 @@
         "main.tsx"
       ]
     },
+    "styled-system": {
+      "path": "styled-system",
+      "purpose": null,
+      "fileCount": 2,
+      "lastAccessed": 1777123577294,
+      "keyFiles": [
+        "helpers.mjs",
+        "styles.css"
+      ]
+    },
     "src/app": {
       "path": "src/app",
       "purpose": "Application code",
-      "fileCount": 0,
-      "lastAccessed": 1776945370244,
-      "keyFiles": []
-    },
-    "src/assets": {
-      "path": "src/assets",
-      "purpose": "Static assets",
-      "fileCount": 3,
-      "lastAccessed": 1776945370244,
+      "fileCount": 1,
+      "lastAccessed": 1777123577295,
       "keyFiles": [
-        "hero.png",
-        "react.svg",
-        "vite.svg"
+        "index.ts"
       ]
     },
     "src/pages": {
       "path": "src/pages",
       "purpose": "Page components",
-      "fileCount": 0,
-      "lastAccessed": 1776945370244,
-      "keyFiles": []
+      "fileCount": 1,
+      "lastAccessed": 1777123577296,
+      "keyFiles": [
+        "index.ts"
+      ]
+    },
+    "styled-system/types": {
+      "path": "styled-system/types",
+      "purpose": "Type definitions",
+      "fileCount": 13,
+      "lastAccessed": 1777123577296,
+      "keyFiles": [
+        "composition.d.ts",
+        "conditions.d.ts",
+        "csstype.d.ts"
+      ]
     }
   },
   "hotPaths": [
@@ -155,14 +180,14 @@
     },
     {
       "path": "CLAUDE.md",
-      "accessCount": 8,
-      "lastAccessed": 1776950788796,
+      "accessCount": 12,
+      "lastAccessed": 1777123867710,
       "type": "file"
     },
     {
       "path": "",
-      "accessCount": 5,
-      "lastAccessed": 1777119363118,
+      "accessCount": 6,
+      "lastAccessed": 1777123641851,
       "type": "directory"
     },
     {
@@ -187,6 +212,12 @@
       "path": ".gemini/skills/icon-workflow/SKILL.md",
       "accessCount": 3,
       "lastAccessed": 1777119541391,
+      "type": "file"
+    },
+    {
+      "path": ".claude/settings.local.json",
+      "accessCount": 3,
+      "lastAccessed": 1777124137448,
       "type": "file"
     },
     {
@@ -283,6 +314,18 @@
       "path": ".gemini/skills/pr-writer/SKILL.md",
       "accessCount": 1,
       "lastAccessed": 1777122444968,
+      "type": "file"
+    },
+    {
+      "path": ".claude/skills",
+      "accessCount": 1,
+      "lastAccessed": 1777123632994,
+      "type": "directory"
+    },
+    {
+      "path": ".claude/skills/agent-collaboration-record/SKILL.md",
+      "accessCount": 1,
+      "lastAccessed": 1777123641129,
       "type": "file"
     }
   ],
