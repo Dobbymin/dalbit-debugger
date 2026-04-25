@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+
+<html lang="ko"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Dalbit Debugger - Example Library</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Space+Grotesk:wght@400;500&amp;family=Work+Sans:wght@400;500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-bright": "#f7f9ff",
+                        "surface": "#f7f9ff",
+                        "on-tertiary-container": "#bdbebf",
+                        "background": "#f7f9ff",
+                        "inverse-on-surface": "#e8f2ff",
+                        "surface-container-lowest": "#ffffff",
+                        "inverse-primary": "#adc6ff",
+                        "on-error": "#ffffff",
+                        "surface-dim": "#c7dcf4",
+                        "inverse-surface": "#1e3244",
+                        "primary-fixed-dim": "#adc6ff",
+                        "on-primary": "#ffffff",
+                        "surface-container-high": "#d8eaff",
+                        "on-background": "#071d2e",
+                        "outline-variant": "#c3c6d2",
+                        "primary": "#003473",
+                        "surface-container": "#e2efff",
+                        "secondary-container": "#2270e4",
+                        "error": "#ba1a1a",
+                        "surface-container-highest": "#d0e5fc",
+                        "on-tertiary-fixed": "#1a1c1d",
+                        "on-tertiary": "#ffffff",
+                        "outline": "#737782",
+                        "on-primary-fixed": "#001a41",
+                        "tertiary-fixed": "#e2e2e3",
+                        "surface-variant": "#d0e5fc",
+                        "on-tertiary-fixed-variant": "#454748",
+                        "secondary-fixed": "#d8e2ff",
+                        "on-surface-variant": "#434751",
+                        "secondary": "#0058be",
+                        "surface-container-low": "#edf4ff",
+                        "tertiary": "#343637",
+                        "primary-container": "#1e4b91",
+                        "secondary-fixed-dim": "#aec6ff",
+                        "error-container": "#ffdad6",
+                        "surface-tint": "#345da4",
+                        "on-primary-fixed-variant": "#15458b",
+                        "tertiary-container": "#4b4d4e",
+                        "on-secondary-container": "#fefcff",
+                        "on-secondary-fixed": "#001a42",
+                        "on-primary-container": "#9fbeff",
+                        "primary-fixed": "#d8e2ff",
+                        "tertiary-fixed-dim": "#c6c6c7",
+                        "on-secondary": "#ffffff",
+                        "on-surface": "#071d2e",
+                        "on-error-container": "#93000a",
+                        "on-secondary-fixed-variant": "#004395"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "margin": "24px",
+                        "gutter": "16px",
+                        "panel-padding": "12px",
+                        "unit": "4px",
+                        "stack-gap": "8px"
+                    },
+                    "fontFamily": {
+                        "body-md": ["Work Sans"],
+                        "headline-md": ["Manrope"],
+                        "headline-lg": ["Manrope"],
+                        "code-md": ["Space Grotesk"],
+                        "label-sm": ["Space Grotesk"]
+                    },
+                    "fontSize": {
+                        "body-md": ["16px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "headline-md": ["24px", { "lineHeight": "1.3", "fontWeight": "600" }],
+                        "headline-lg": ["32px", { "lineHeight": "1.2", "fontWeight": "700" }],
+                        "code-md": ["14px", { "lineHeight": "1.5", "fontWeight": "400" }],
+                        "label-sm": ["12px", { "lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "500" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md text-body-md h-screen flex flex-col overflow-hidden">
+<!-- TopAppBar -->
+<header class="bg-white dark:bg-slate-950 font-manrope text-sm antialiased docked full-width top-0 z-50 border-b border-slate-200 dark:border-slate-800 flat no shadows flex justify-between items-center w-full px-6 h-16 shrink-0">
+<div class="flex items-center gap-6">
+<div class="text-lg font-bold tracking-tight text-[#1E4B91] dark:text-blue-400">Dalbit Debugger</div>
+<nav class="hidden md:flex gap-6 h-full items-center">
+<a class="text-slate-500 dark:text-slate-400 hover:text-[#1E4B91] dark:hover:text-blue-300 hover:bg-slate-50 dark:hover:bg-slate-900 transition-colors duration-200 cursor-pointer active:opacity-80 py-5" href="#">Debugger</a>
+<a class="text-[#1E4B91] dark:text-blue-400 font-semibold border-b-2 border-[#1E4B91] pb-1 py-5 h-full flex items-center" href="#">Library</a>
+<a class="text-slate-500 dark:text-slate-400 hover:text-[#1E4B91] dark:hover:text-blue-300 hover:bg-slate-50 dark:hover:bg-slate-900 transition-colors duration-200 cursor-pointer active:opacity-80 py-5" href="#">Documentation</a>
+</nav>
+</div>
+<div class="flex items-center gap-4">
+<div class="hidden md:flex items-center border border-outline-variant rounded-DEFAULT px-3 py-1.5 bg-surface-bright">
+<span class="material-symbols-outlined text-outline text-[18px] mr-2">search</span>
+<input class="bg-transparent border-none outline-none text-body-md font-body-md text-on-surface placeholder:text-outline p-0 focus:ring-0 w-48" placeholder="Search examples..." type="text"/>
+</div>
+<div class="flex items-center gap-3">
+<button class="text-outline hover:text-primary transition-colors duration-200 cursor-pointer active:opacity-80 flex items-center justify-center w-8 h-8 rounded-DEFAULT hover:bg-surface-container"><span class="material-symbols-outlined">settings</span></button>
+<button class="text-outline hover:text-primary transition-colors duration-200 cursor-pointer active:opacity-80 flex items-center justify-center w-8 h-8 rounded-DEFAULT hover:bg-surface-container"><span class="material-symbols-outlined">help</span></button>
+<button class="text-outline hover:text-primary transition-colors duration-200 cursor-pointer active:opacity-80 flex items-center justify-center w-8 h-8 rounded-DEFAULT hover:bg-surface-container"><span class="material-symbols-outlined">account_circle</span></button>
+</div>
+<button class="bg-primary-container text-on-primary font-label-sm text-label-sm px-4 py-2 rounded-DEFAULT hover:opacity-90 transition-opacity">Start Debugging</button>
+</div>
+</header>
+<div class="flex flex-1 overflow-hidden">
+<!-- SideNavBar -->
+<aside class="bg-[#F6F6F7] dark:bg-slate-900/50 font-manrope text-xs font-medium docked left-0 h-full w-64 hidden md:flex border-r border-slate-200 dark:border-slate-800 flat no shadows flex-col p-4 gap-2 shrink-0">
+<div class="flex items-center gap-3 p-3 mb-4">
+<div class="w-8 h-8 rounded-DEFAULT bg-primary-container text-on-primary flex items-center justify-center font-bold text-lg">D</div>
+<div>
+<div class="text-xl font-black text-[#1E4B91] dark:text-blue-400">Dalbit</div>
+<div class="text-slate-500 text-[10px] uppercase tracking-wider">Step Debugger</div>
+</div>
+</div>
+<button class="w-full bg-primary-container text-on-primary py-2.5 rounded-DEFAULT font-label-sm text-label-sm mb-4 hover:opacity-90 transition-opacity flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-[16px]">add</span>
+                New Session
+            </button>
+<nav class="flex flex-col gap-1">
+<a class="flex items-center gap-3 text-slate-600 dark:text-slate-400 p-3 hover:bg-slate-200/50 dark:hover:bg-slate-800/50 rounded-md hover:translate-x-1 transition-transform duration-150 cursor-pointer group" href="#">
+<span class="material-symbols-outlined">home</span>
+<span>Home</span>
+</a>
+<a class="flex items-center gap-3 text-slate-600 dark:text-slate-400 p-3 hover:bg-slate-200/50 dark:hover:bg-slate-800/50 rounded-md hover:translate-x-1 transition-transform duration-150 cursor-pointer group" href="#">
+<span class="material-symbols-outlined">terminal</span>
+<span>Debugger</span>
+</a>
+<a class="flex items-center gap-3 bg-white dark:bg-slate-800 text-[#1E4B91] dark:text-blue-300 rounded-md p-3 shadow-sm border border-slate-200 dark:border-slate-700 cursor-pointer group" href="#">
+<span class="material-symbols-outlined text-primary-container">grid_view</span>
+<span class="font-bold">Snippets</span>
+</a>
+<a class="flex items-center gap-3 text-slate-600 dark:text-slate-400 p-3 hover:bg-slate-200/50 dark:hover:bg-slate-800/50 rounded-md hover:translate-x-1 transition-transform duration-150 cursor-pointer group" href="#">
+<span class="material-symbols-outlined">settings</span>
+<span>Settings</span>
+</a>
+</nav>
+</aside>
+<!-- Main Canvas -->
+<main class="flex-1 overflow-y-auto bg-background p-margin">
+<div class="max-w-6xl mx-auto space-y-8">
+<header class="mb-8">
+<h1 class="font-headline-lg text-headline-lg text-on-background mb-2">Example Library</h1>
+<p class="text-on-surface-variant font-body-md">Explore categorized Python snippets to practice stepping through code.</p>
+</header>
+<!-- Category: Variables & Conditionals -->
+<section>
+<div class="flex items-center justify-between border-b border-outline-variant pb-2 mb-4">
+<h2 class="font-headline-md text-headline-md text-primary-container flex items-center gap-2">
+<span class="material-symbols-outlined">code</span>
+                            변수와 조건문
+                        </h2>
+<span class="text-label-sm font-label-sm text-outline bg-surface-container px-2 py-1 rounded-DEFAULT">3 Examples</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+<!-- Card 1 -->
+<div class="bg-surface-container-lowest border border-outline-variant rounded-xl p-panel-padding flex flex-col hover:border-primary-container transition-colors shadow-sm">
+<div class="mb-3">
+<h3 class="font-headline-md text-[18px] text-on-background mb-1">짝수 홀수 판별기</h3>
+<p class="font-body-md text-[14px] text-on-surface-variant line-clamp-2">입력된 숫자가 짝수인지 홀수인지 판별하는 기본적인 조건문 예제입니다.</p>
+</div>
+<div class="bg-surface p-3 rounded-lg border border-surface-container-high font-code-md text-code-md text-on-surface-variant mb-4 overflow-hidden relative">
+<div class="absolute left-0 top-0 bottom-0 w-1 bg-primary-container"></div>
+<pre class="pl-2"><code>num = 7
+if num % 2 == 0:
+    print("짝수")
+else:
+    print("홀수")</code></pre>
+</div>
+<div class="mt-auto flex justify-end">
+<button class="flex items-center gap-1.5 px-3 py-1.5 border border-primary-container text-primary-container font-label-sm text-label-sm rounded-DEFAULT hover:bg-surface-container transition-colors">
+<span class="material-symbols-outlined text-[16px]">play_arrow</span>
+                                    디버거에서 열기
+                                </button>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="bg-surface-container-lowest border border-outline-variant rounded-xl p-panel-padding flex flex-col hover:border-primary-container transition-colors shadow-sm">
+<div class="mb-3">
+<h3 class="font-headline-md text-[18px] text-on-background mb-1">학점 계산기</h3>
+<p class="font-body-md text-[14px] text-on-surface-variant line-clamp-2">점수에 따라 A, B, C, D, F 학점을 부여하는 다중 조건문 예제입니다.</p>
+</div>
+<div class="bg-surface p-3 rounded-lg border border-surface-container-high font-code-md text-code-md text-on-surface-variant mb-4 overflow-hidden relative">
+<pre class="pl-2"><code>score = 85
+if score &gt;= 90:
+    grade = 'A'
+elif score &gt;= 80:
+    grade = 'B'
+...</code></pre>
+</div>
+<div class="mt-auto flex justify-end">
+<button class="flex items-center gap-1.5 px-3 py-1.5 border border-primary-container text-primary-container font-label-sm text-label-sm rounded-DEFAULT hover:bg-surface-container transition-colors">
+<span class="material-symbols-outlined text-[16px]">play_arrow</span>
+                                    디버거에서 열기
+                                </button>
+</div>
+</div>
+</div>
+</section>
+<!-- Category: Loops -->
+<section>
+<div class="flex items-center justify-between border-b border-outline-variant pb-2 mb-4 mt-8">
+<h2 class="font-headline-md text-headline-md text-primary-container flex items-center gap-2">
+<span class="material-symbols-outlined">data_object</span>
+                            반복문
+                        </h2>
+<span class="text-label-sm font-label-sm text-outline bg-surface-container px-2 py-1 rounded-DEFAULT">2 Examples</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+<!-- Card 3 -->
+<div class="bg-surface-container-lowest border border-outline-variant rounded-xl p-panel-padding flex flex-col hover:border-primary-container transition-colors shadow-sm">
+<div class="mb-3">
+<div class="flex justify-between items-start">
+<h3 class="font-headline-md text-[18px] text-on-background mb-1">1부터 5까지 합계 구하기</h3>
+<span class="bg-[#ffdad6] text-[#93000a] text-[10px] font-bold px-1.5 py-0.5 rounded-DEFAULT">POPULAR</span>
+</div>
+<p class="font-body-md text-[14px] text-on-surface-variant line-clamp-2">for 루프를 사용하여 누적 합을 계산하는 과정을 단계별로 확인합니다.</p>
+</div>
+<div class="bg-surface p-3 rounded-lg border border-surface-container-high font-code-md text-code-md text-on-surface-variant mb-4 overflow-hidden relative">
+<div class="absolute left-0 top-0 bottom-0 w-1 bg-primary-container"></div>
+<pre class="pl-2"><code>total = 0
+for i in range(1, 6):
+    total += i
+print(total)</code></pre>
+</div>
+<div class="mt-auto flex justify-end">
+<button class="flex items-center gap-1.5 px-3 py-1.5 border border-primary-container text-primary-container font-label-sm text-label-sm rounded-DEFAULT hover:bg-surface-container transition-colors">
+<span class="material-symbols-outlined text-[16px]">play_arrow</span>
+                                    디버거에서 열기
+                                </button>
+</div>
+</div>
+<!-- Card 4 -->
+<div class="bg-surface-container-lowest border border-outline-variant rounded-xl p-panel-padding flex flex-col hover:border-primary-container transition-colors shadow-sm">
+<div class="mb-3">
+<h3 class="font-headline-md text-[18px] text-on-background mb-1">구구단 출력</h3>
+<p class="font-body-md text-[14px] text-on-surface-variant line-clamp-2">중첩 for 루프의 동작 방식을 이해하기 위한 기본 예제입니다.</p>
+</div>
+<div class="bg-surface p-3 rounded-lg border border-surface-container-high font-code-md text-code-md text-on-surface-variant mb-4 overflow-hidden relative">
+<pre class="pl-2"><code>for i in range(2, 4):
+    for j in range(1, 4):
+        print(f"{i} * {j} = {i*j}")</code></pre>
+</div>
+<div class="mt-auto flex justify-end">
+<button class="flex items-center gap-1.5 px-3 py-1.5 border border-primary-container text-primary-container font-label-sm text-label-sm rounded-DEFAULT hover:bg-surface-container transition-colors">
+<span class="material-symbols-outlined text-[16px]">play_arrow</span>
+                                    디버거에서 열기
+                                </button>
+</div>
+</div>
+</div>
+</section>
+<!-- Category: Functions -->
+<section>
+<div class="flex items-center justify-between border-b border-outline-variant pb-2 mb-4 mt-8">
+<h2 class="font-headline-md text-headline-md text-primary-container flex items-center gap-2">
+<span class="material-symbols-outlined">functions</span>
+                            함수
+                        </h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+<!-- Card 5 -->
+<div class="bg-surface-container-lowest border border-outline-variant rounded-xl p-panel-padding flex flex-col hover:border-primary-container transition-colors shadow-sm">
+<div class="mb-3">
+<h3 class="font-headline-md text-[18px] text-on-background mb-1">팩토리얼 (재귀)</h3>
+<p class="font-body-md text-[14px] text-on-surface-variant line-clamp-2">재귀 함수의 호출 스택(Call Stack)이 쌓이는 과정을 시각적으로 확인합니다.</p>
+</div>
+<div class="bg-surface p-3 rounded-lg border border-surface-container-high font-code-md text-code-md text-on-surface-variant mb-4 overflow-hidden relative">
+<div class="absolute left-0 top-0 bottom-0 w-1 bg-primary-container"></div>
+<pre class="pl-2"><code>def factorial(n):
+    if n == 1:
+        return 1
+    return n * factorial(n-1)</code></pre>
+</div>
+<div class="mt-auto flex justify-end">
+<button class="flex items-center gap-1.5 px-3 py-1.5 border border-primary-container text-primary-container font-label-sm text-label-sm rounded-DEFAULT hover:bg-surface-container transition-colors">
+<span class="material-symbols-outlined text-[16px]">play_arrow</span>
+                                    디버거에서 열기
+                                </button>
+</div>
+</div>
+</div>
+</section>
+</div>
+<!-- Footer inside main canvas area as requested by layout norms -->
+<footer class="mt-16 bg-white dark:bg-slate-950 font-manrope text-xs tracking-wide full-width py-12 border-t border-slate-200 dark:border-slate-800 flat no shadows text-slate-500 dark:text-slate-400">
+<div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center px-8">
+<div>© 2024 Dalbit Debugger. Education through Architecture.</div>
+<div class="flex gap-4 mt-4 md:mt-0">
+<a class="text-slate-400 hover:text-slate-600 hover:text-[#1E4B91] transition-colors" href="#">Documentation</a>
+<a class="text-slate-400 hover:text-slate-600 hover:text-[#1E4B91] transition-colors" href="#">Privacy Policy</a>
+<a class="text-slate-400 hover:text-slate-600 hover:text-[#1E4B91] transition-colors" href="#">Open Source</a>
+<a class="text-slate-400 hover:text-slate-600 hover:text-[#1E4B91] transition-colors" href="#">Contact Support</a>
+</div>
+</div>
+</footer>
+</main>
+</div>
+</body></html>
