@@ -5,14 +5,13 @@ import {
   HelpCircleIcon,
   ICON_HOVER_TOKENS,
   ICON_MOTION,
-  ICON_SIZE,
-  ICON_STYLE,
   ROUTE_PATHS,
   SearchIcon,
   SettingsIcon,
 } from "@/shared";
 
-import { css } from "../../../../styled-system/css";
+import { css, cx } from "../../../../styled-system/css";
+import { icon } from "../../../../styled-system/recipes";
 
 type ActiveTab = "Debugger" | "Library" | "Documentation";
 
@@ -114,11 +113,13 @@ export const Header = ({ activeTab = "Debugger", sticky = false, showSearch = fa
             })}
           >
             <SearchIcon
-              className={css({
-                ...ICON_STYLE.nav,
-                width: ICON_SIZE.lg,
-                height: ICON_SIZE.lg,
-              })}
+              className={cx(
+                icon({ usage: "nav" }),
+                css({
+                  w: "icon.lg",
+                  h: "icon.lg",
+                }),
+              )}
             />
             <span>Search examples...</span>
           </div>
@@ -170,11 +171,13 @@ export const Header = ({ activeTab = "Debugger", sticky = false, showSearch = fa
             })}
           >
             <item.Icon
-              className={css({
-                ...ICON_STYLE.action,
-                width: ICON_SIZE.xl,
-                height: ICON_SIZE.xl,
-              })}
+              className={cx(
+                icon({ usage: "action" }),
+                css({
+                  w: "icon.lg",
+                  h: "icon.lg",
+                }),
+              )}
             />
           </button>
         ))}
