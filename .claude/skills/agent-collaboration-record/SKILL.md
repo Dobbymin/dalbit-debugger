@@ -1,6 +1,6 @@
 ---
 name: agent-collaboration-record
-description: "Use when documenting agent-assisted work by task scope, creating docs/logs/agents/*.md files, or writing evidence for AI agent orchestration. Enforces per-scope records with tools used, delegated scope, verification, and correction notes."
+description: "Use when documenting agent-assisted work by task scope, creating docs/log/agents/*.md files, or writing evidence for AI agent orchestration. Enforces per-scope records with tools used, delegated scope, verification, and correction notes."
 origin: custom
 ---
 
@@ -14,7 +14,7 @@ Create one file per work scope so the record stays readable and reviewable.
 
 ## Required File Pattern
 
-- Place files under `docs/logs/agents/`
+- Place files under `docs/log/agents/`
 - Use numbered filenames such as `01-초기-구조-설계.md`, `02-런타임-연동.md`
 - Keep one file focused on one task scope
 

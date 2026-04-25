@@ -180,15 +180,27 @@
     },
     {
       "path": "CLAUDE.md",
-      "accessCount": 12,
-      "lastAccessed": 1777123867710,
+      "accessCount": 13,
+      "lastAccessed": 1777124360026,
       "type": "file"
     },
     {
       "path": "",
-      "accessCount": 6,
-      "lastAccessed": 1777123641851,
+      "accessCount": 8,
+      "lastAccessed": 1777124334361,
       "type": "directory"
+    },
+    {
+      "path": ".claude/skills/agent-collaboration-record/SKILL.md",
+      "accessCount": 4,
+      "lastAccessed": 1777124357061,
+      "type": "file"
+    },
+    {
+      "path": ".claude/settings.local.json",
+      "accessCount": 4,
+      "lastAccessed": 1777124361033,
+      "type": "file"
     },
     {
       "path": "src/pages/main/MainPage.tsx",
@@ -215,9 +227,9 @@
       "type": "file"
     },
     {
-      "path": ".claude/settings.local.json",
+      "path": ".gemini/skills/agent-collaboration-record/SKILL.md",
       "accessCount": 3,
-      "lastAccessed": 1777124137448,
+      "lastAccessed": 1777124358372,
       "type": "file"
     },
     {
@@ -321,12 +333,6 @@
       "accessCount": 1,
       "lastAccessed": 1777123632994,
       "type": "directory"
-    },
-    {
-      "path": ".claude/skills/agent-collaboration-record/SKILL.md",
-      "accessCount": 1,
-      "lastAccessed": 1777123641129,
-      "type": "file"
     }
   ],
   "userDirectives": []

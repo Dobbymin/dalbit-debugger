@@ -266,7 +266,7 @@ pnpm run lint && pnpm run format && pnpm run tsc
 - 같은 레이어 간 슬라이스 직접 참조 금지
 
 ### 에이전트 협업 기록 (필수)
-의미 있는 작업(기능 구현, 버그 수정, 리팩터링 등)을 완료한 후 **반드시** `agent-collaboration-record` skill을 사용해 `docs/logs/agents/` 에 기록을 남긴다.
+의미 있는 작업(기능 구현, 버그 수정, 리팩터링 등)을 완료한 후 **반드시** `agent-collaboration-record` skill을 사용해 `docs/log/agents/` 에 기록을 남긴다.
 - 파일명은 `01-작업명.md` 형식으로 순번을 붙여 관리한다
 - 기존 파일이 있으면 다음 번호를 이어서 사용한다
 - 단순 질문·조회성 대화는 기록 생략 가능
