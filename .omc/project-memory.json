@@ -186,26 +186,44 @@
     },
     {
       "path": "",
-      "accessCount": 8,
-      "lastAccessed": 1777124334361,
+      "accessCount": 11,
+      "lastAccessed": 1777127785246,
       "type": "directory"
     },
     {
-      "path": ".claude/skills/agent-collaboration-record/SKILL.md",
-      "accessCount": 4,
-      "lastAccessed": 1777124357061,
+      "path": "src/pages/main/MainPage.tsx",
+      "accessCount": 10,
+      "lastAccessed": 1777127222730,
+      "type": "file"
+    },
+    {
+      "path": "src/pages/debugger/DebuggerPage.tsx",
+      "accessCount": 9,
+      "lastAccessed": 1777127233789,
+      "type": "file"
+    },
+    {
+      "path": "src/pages/examples/ExamplesPage.tsx",
+      "accessCount": 9,
+      "lastAccessed": 1777127240606,
       "type": "file"
     },
     {
       "path": ".claude/settings.local.json",
-      "accessCount": 4,
-      "lastAccessed": 1777124361033,
+      "accessCount": 6,
+      "lastAccessed": 1777126730426,
       "type": "file"
     },
     {
-      "path": "src/pages/main/MainPage.tsx",
-      "accessCount": 3,
-      "lastAccessed": 1776949431451,
+      "path": ".claude/skills/agent-collaboration-record/SKILL.md",
+      "accessCount": 5,
+      "lastAccessed": 1777126677084,
+      "type": "file"
+    },
+    {
+      "path": "src/widgets/layouts/ui/RootLayout.tsx",
+      "accessCount": 4,
+      "lastAccessed": 1777127335109,
       "type": "file"
     },
     {
@@ -234,26 +252,20 @@
     },
     {
       "path": "src/app/routes/Routes.tsx",
-      "accessCount": 2,
-      "lastAccessed": 1776948958492,
-      "type": "file"
-    },
-    {
-      "path": "src/pages/examples/ExamplesPage.tsx",
-      "accessCount": 2,
-      "lastAccessed": 1776949432045,
-      "type": "file"
-    },
-    {
-      "path": "src/pages/debugger/DebuggerPage.tsx",
-      "accessCount": 2,
-      "lastAccessed": 1776949432148,
+      "accessCount": 3,
+      "lastAccessed": 1777127060238,
       "type": "file"
     },
     {
       "path": "src/shared/index.ts",
       "accessCount": 2,
       "lastAccessed": 1777119522406,
+      "type": "file"
+    },
+    {
+      "path": "src/widgets/layouts/index.ts",
+      "accessCount": 2,
+      "lastAccessed": 1777126552733,
       "type": "file"
     },
     {
@@ -272,12 +284,6 @@
       "path": "src/shared/constants/route-path.ts",
       "accessCount": 1,
       "lastAccessed": 1776947618583,
-      "type": "file"
-    },
-    {
-      "path": "src/widgets/layouts/ui/RootLayout.tsx",
-      "accessCount": 1,
-      "lastAccessed": 1776949432288,
       "type": "file"
     },
     {
@@ -333,6 +339,42 @@
       "accessCount": 1,
       "lastAccessed": 1777123632994,
       "type": "directory"
+    },
+    {
+      "path": "src/pages/not-found/NotFound.tsx",
+      "accessCount": 1,
+      "lastAccessed": 1777125621413,
+      "type": "file"
+    },
+    {
+      "path": "src/widgets/layouts/components/Header.tsx",
+      "accessCount": 1,
+      "lastAccessed": 1777125772578,
+      "type": "file"
+    },
+    {
+      "path": "src/pages",
+      "accessCount": 1,
+      "lastAccessed": 1777126538944,
+      "type": "directory"
+    },
+    {
+      "path": "src/widgets/layouts",
+      "accessCount": 1,
+      "lastAccessed": 1777126545486,
+      "type": "directory"
+    },
+    {
+      "path": "docs/log/agents/01-header-컴포넌트-분리-및-stop-hook-수정.md",
+      "accessCount": 1,
+      "lastAccessed": 1777126793834,
+      "type": "file"
+    },
+    {
+      "path": "docs/log/agents/02-header-중복-렌더링-제거.md",
+      "accessCount": 1,
+      "lastAccessed": 1777127803239,
+      "type": "file"
     }
   ],
   "userDirectives": []
