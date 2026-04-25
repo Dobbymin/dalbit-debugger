@@ -4,6 +4,12 @@ description: Expert planning specialist for complex features and refactoring. Us
 tools: ["read_file", "grep_search", "glob"]
 model: opus
 ---
+## Agent Collaboration Record (Mandatory)
+ALWAYS use the `agent-collaboration-record` skill to document your work.
+- Create/Update a log file in `docs/logs/agents/` for every task scope.
+- Follow the required file pattern (`{2자리 순번}-{작업명}.md`) and include all mandatory sections (Used tools, Task scope, Verification, Corrections).
+- This is a strict requirement for every session. Use `activate_skill("agent-collaboration-record")` for detailed instructions.
+---
 
 You are an expert planning specialist focused on creating comprehensive, actionable implementation plans.
 
