@@ -1,9 +1,7 @@
 import {
-  AccountCircleIcon,
   BackspaceIcon,
   CodeIcon,
   DebuggerIcon,
-  HelpCircleIcon,
   HomeIcon,
   ICON_HOVER_TOKENS,
   ICON_MOTION,
@@ -69,127 +67,6 @@ export default function DebuggerPage() {
         fontFamily: "body",
       })}
     >
-      <header
-        className={css({
-          height: "64px",
-          borderBottomWidth: "1px",
-          borderBottomStyle: "solid",
-          borderBottomColor: "outlineVariant",
-          backgroundColor: "surfaceContainerLowest",
-          paddingX: { base: "10px", md: "24px" },
-          display: "flex",
-          justifyContent: "space-between",
-          alignItems: "center",
-          gap: "12px",
-          flexShrink: 0,
-        })}
-      >
-        <div
-          className={css({
-            display: "flex",
-            alignItems: "center",
-            gap: { base: "12px", md: "24px" },
-            minWidth: 0,
-          })}
-        >
-          <strong
-            className={css({
-              color: "primaryContainer",
-              fontFamily: "headline",
-              fontWeight: 800,
-              fontSize: "16px",
-              whiteSpace: "nowrap",
-            })}
-          >
-            Dalbit Debugger
-          </strong>
-
-          <nav
-            className={css({
-              display: { base: "none", md: "flex" },
-              gap: "16px",
-              alignItems: "center",
-            })}
-          >
-            {[
-              { label: "Debugger", active: true },
-              { label: "Library", active: false },
-              { label: "Documentation", active: false },
-            ].map((tab) => (
-              <button
-                key={tab.label}
-                type="button"
-                className={css({
-                  border: "none",
-                  borderBottomWidth: tab.active ? "2px" : "0",
-                  borderBottomStyle: "solid",
-                  borderBottomColor: "primaryContainer",
-                  backgroundColor: "transparent",
-                  color: tab.active ? "primaryContainer" : "onSurfaceVariant",
-                  fontFamily: "code",
-                  fontSize: "12px",
-                  paddingBottom: "4px",
-                  cursor: "pointer",
-                })}
-              >
-                {tab.label}
-              </button>
-            ))}
-          </nav>
-        </div>
-
-        <div
-          className={css({
-            display: "flex",
-            alignItems: "center",
-            gap: "8px",
-          })}
-        >
-          <button
-            type="button"
-            className={css({
-              border: "none",
-              borderRadius: "DEFAULT",
-              backgroundColor: "primaryContainer",
-              color: "onPrimary",
-              height: "32px",
-              paddingX: "10px",
-              fontFamily: "code",
-              fontSize: "11px",
-              whiteSpace: "nowrap",
-              cursor: "pointer",
-            })}
-          >
-            Start Debugging
-          </button>
-
-          {[
-            { label: "설정", Icon: SettingsIcon },
-            { label: "도움말", Icon: HelpCircleIcon },
-            { label: "계정", Icon: AccountCircleIcon },
-          ].map((item) => (
-            <button
-              key={item.label}
-              type="button"
-              aria-label={item.label}
-              className={css({
-                width: "28px",
-                height: "28px",
-                border: "none",
-                borderRadius: "full",
-                backgroundColor: "transparent",
-                color: "primary",
-                cursor: "pointer",
-                transition: ICON_MOTION.transition.interactive,
-                _hover: ICON_HOVER_TOKENS.ghost,
-              })}
-            >
-              <item.Icon className={css(ICON_STYLE.action)} />
-            </button>
-          ))}
-        </div>
-      </header>
-
       <div
         className={css({
           display: "flex",
