@@ -14,7 +14,7 @@ Icons are **not** imported directly as SVGs. Instead, a generation script reads 
 ## Directory Structure
 
 ```
-src/shared/_assets/icons/
+src/shared/_assets/icon/
 ├── *.svg                    ← raw SVG source files (place new icons here)
 ├── index.ts                 ← auto-generated, do not edit
 └── components/
@@ -29,7 +29,7 @@ src/shared/_assets/icons/
 Place the `.svg` file in:
 
 ```
-src/shared/_assets/icons/<icon-name>.svg
+src/shared/_assets/icon/<icon-name>.svg
 ```
 
 **Naming convention**: kebab-case only.
@@ -51,7 +51,7 @@ pnpm run generate:icons
 
 This script (`script/generate-icons.mjs`) will:
 
-1. Read all `.svg` files from `src/shared/_assets/icons/`
+1. Read all `.svg` files from `src/shared/_assets/icon/`
 2. Extract `viewBox` and inner SVG content from each file
 3. Generate a TSX React component per icon in `components/`
 4. Write `components/index.ts` and `icons/index.ts` barrel exports
@@ -109,7 +109,7 @@ Rule: kebab-case filename → PascalCase + `Icon` suffix.
 
 ## Checklist
 
-- [ ] `.svg` file placed in `src/shared/_assets/icons/` with kebab-case name
+- [ ] `.svg` file placed in `src/shared/_assets/icon/` with kebab-case name
 - [ ] `pnpm run generate:icons` executed successfully
-- [ ] Icon imported from `@/shared` (not from `@/shared/_assets/icons` or `components/` directly)
+- [ ] Icon imported from `@/shared` (not from `@/shared/_assets/icon` or `components/` directly)
 - [ ] Icon sized and colored via PandaCSS `css()` or token props
