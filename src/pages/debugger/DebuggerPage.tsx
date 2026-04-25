@@ -1,3 +1,19 @@
+import {
+  AccountCircleIcon,
+  BackspaceIcon,
+  DebuggerIcon,
+  HelpCircleIcon,
+  HomeIcon,
+  ICON_HOVER_TOKENS,
+  ICON_MOTION,
+  ICON_STYLE,
+  PauseIcon,
+  PlayIcon,
+  SettingsIcon,
+  SparkIcon,
+  StopIcon,
+} from "@/shared";
+
 import { css } from "../../../styled-system/css";
 
 type DebugLine = {
@@ -14,12 +30,17 @@ type VariableRow = {
 };
 
 export default function DebuggerPage() {
-  const leftMenus = ["Home", "Debugger", "Snippets", "Settings"] as const;
+  const leftMenus = [
+    { label: "Home", Icon: HomeIcon },
+    { label: "Debugger", Icon: DebuggerIcon },
+    { label: "Snippets", Icon: DebuggerIcon },
+    { label: "Settings", Icon: SettingsIcon },
+  ] as const;
 
   const controls = [
-    { label: "단계 실행", active: true, icon: "▶" },
-    { label: "일시정지", active: false, icon: "⏸" },
-    { label: "정지", active: false, icon: "■" },
+    { label: "단계 실행", active: true, Icon: PlayIcon },
+    { label: "일시정지", active: false, Icon: PauseIcon },
+    { label: "정지", active: false, Icon: StopIcon },
   ] as const;
 
   const codeLines: DebugLine[] = [
@@ -142,9 +163,9 @@ export default function DebuggerPage() {
           </button>
 
           {[
-            { label: "설정", icon: "⚙" },
-            { label: "도움말", icon: "?" },
-            { label: "계정", icon: "◉" },
+            { label: "설정", Icon: SettingsIcon },
+            { label: "도움말", Icon: HelpCircleIcon },
+            { label: "계정", Icon: AccountCircleIcon },
           ].map((item) => (
             <button
               key={item.label}
@@ -158,10 +179,11 @@ export default function DebuggerPage() {
                 backgroundColor: "transparent",
                 color: "primary",
                 cursor: "pointer",
-                _hover: { backgroundColor: "surfaceContainerHigh" },
+                transition: ICON_MOTION.transition.interactive,
+                _hover: ICON_HOVER_TOKENS.ghost,
               })}
             >
-              {item.icon}
+              <item.Icon className={css(ICON_STYLE.action)} />
             </button>
           ))}
         </div>
@@ -189,11 +211,11 @@ export default function DebuggerPage() {
           })}
         >
           {leftMenus.map((menu) => {
-            const isActive = menu === "Debugger";
+            const isActive = menu.label === "Debugger";
 
             return (
               <button
-                key={menu}
+                key={menu.label}
                 type="button"
                 className={css({
                   border: "none",
@@ -209,9 +231,13 @@ export default function DebuggerPage() {
                   backgroundColor: isActive ? "surfaceContainerLowest" : "transparent",
                   boxShadow: isActive ? "0 1px 2px rgba(0, 0, 0, 0.08)" : "none",
                   cursor: "pointer",
+                  transition: ICON_MOTION.transition.interactive,
                 })}
               >
-                {menu}
+                <span className={css({ marginRight: "8px", display: "inline-flex" })}>
+                  <menu.Icon className={css(ICON_STYLE.nav)} />
+                </span>
+                {menu.label}
               </button>
             );
           })}
@@ -262,9 +288,10 @@ export default function DebuggerPage() {
                     fontSize: "12px",
                     whiteSpace: "nowrap",
                     cursor: "pointer",
+                    transition: ICON_MOTION.transition.interactive,
                   })}
                 >
-                  <span>{control.icon}</span>
+                  <control.Icon className={css(ICON_STYLE.control)} />
                   <span>{control.label}</span>
                 </button>
               ))}
@@ -413,7 +440,7 @@ export default function DebuggerPage() {
                 })}
               >
                 <span>변수 상태</span>
-                <span>⌁</span>
+                <SparkIcon className={css(ICON_STYLE.control)} />
               </div>
 
               <div
@@ -491,13 +518,17 @@ export default function DebuggerPage() {
               <button
                 type="button"
                 className={css({
+                  display: "inline-flex",
+                  alignItems: "center",
                   border: "none",
                   backgroundColor: "transparent",
                   color: "outline",
                   cursor: "pointer",
+                  transition: ICON_MOTION.transition.interactive,
+                  _hover: ICON_HOVER_TOKENS.subtle,
                 })}
               >
-                ⌫
+                <BackspaceIcon className={css(ICON_STYLE.control)} />
               </button>
             </div>
 

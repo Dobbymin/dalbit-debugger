@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-import { BrokenImageIcon, BugReportIcon, HomeIcon, ROUTE_PATHS } from "@/shared";
+import { BrokenImageIcon, BugReportIcon, HomeIcon, ICON_MOTION, ICON_STYLE, ROUTE_PATHS } from "@/shared";
 
 import { css } from "../../../styled-system/css";
 
@@ -35,7 +35,12 @@ export default function NotFound() {
           })}
         >
           <div className={css({ display: "flex", justifyContent: "center", mb: "20px" })}>
-            <BrokenImageIcon className={css({ width: "80px", height: "80px", color: "outline" })} />
+            <BrokenImageIcon
+              className={css({
+                ...ICON_STYLE.hero,
+                color: "outline",
+              })}
+            />
           </div>
 
           <h1
@@ -104,11 +109,11 @@ export default function NotFound() {
                 fontFamily: "code",
                 fontSize: "12px",
                 textDecoration: "none",
-                transitionDuration: "200ms",
+                transition: ICON_MOTION.transition.interactive,
                 _hover: { bg: "primaryContainer", borderColor: "primaryContainer" },
               })}
             >
-              <HomeIcon className={css({ width: "16px", height: "16px" })} />
+              <HomeIcon className={css(ICON_STYLE.nav)} />
               <span>홈으로 돌아가기</span>
             </Link>
 
@@ -131,11 +136,11 @@ export default function NotFound() {
                 fontFamily: "code",
                 fontSize: "12px",
                 textDecoration: "none",
-                transitionDuration: "200ms",
+                transition: ICON_MOTION.transition.interactive,
                 _hover: { bg: "surfaceVariant" },
               })}
             >
-              <BugReportIcon className={css({ width: "16px", height: "16px" })} />
+              <BugReportIcon className={css(ICON_STYLE.nav)} />
               <span>디버거로 이동</span>
             </Link>
           </div>
