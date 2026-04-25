@@ -16,10 +16,12 @@ export default defineConfig({
       tokens: {
         fonts: {
           headline: {
-            value: '"Manrope", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif',
+            value:
+              '"Pretendard", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif',
           },
           body: {
-            value: '"Work Sans", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif',
+            value:
+              '"Pretendard", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif',
           },
           code: {
             value: '"Space Grotesk", "JetBrains Mono", "SFMono-Regular", "Menlo", "Consolas", monospace',
@@ -33,12 +35,32 @@ export default defineConfig({
           xl: { value: "0.75rem" },
           full: { value: "9999px" },
         },
+        sizes: {
+          icon: {
+            xs: { value: "12px" },
+            sm: { value: "14px" },
+            md: { value: "16px" },
+            lg: { value: "20px" },
+            xl: { value: "24px" },
+            card: { value: "32px" },
+            hero: { value: "80px" },
+          },
+        },
         spacing: {
           unit: { value: "4px" },
           gutter: { value: "16px" },
           margin: { value: "24px" },
           panelPadding: { value: "12px" },
           stackGap: { value: "8px" },
+        },
+        durations: {
+          iconFast: { value: "140ms" },
+          iconNormal: { value: "180ms" },
+          iconSlow: { value: "220ms" },
+        },
+        easings: {
+          iconStandard: { value: "cubic-bezier(0.2, 0, 0, 1)" },
+          iconEmphasized: { value: "cubic-bezier(0.2, 0.8, 0.2, 1)" },
         },
         shadows: {
           floating: { value: "0 4px 20px rgba(33, 53, 71, 0.08)" },
@@ -141,6 +163,54 @@ export default defineConfig({
             fontWeight: "500",
             lineHeight: "1.2",
             letterSpacing: "0.05em",
+          },
+        },
+      },
+      recipes: {
+        icon: {
+          className: "icon",
+          base: {
+            flexShrink: 0,
+            transition: "transform {durations.iconNormal} {easings.iconStandard}",
+          },
+          variants: {
+            usage: {
+              action: {
+                w: "icon.md",
+                h: "icon.md",
+                scale: "1.01",
+              },
+              nav: {
+                w: "icon.md",
+                h: "icon.md",
+                scale: "1",
+              },
+              control: {
+                w: "icon.sm",
+                h: "icon.sm",
+                scale: "1.03",
+              },
+              feature: {
+                w: "icon.card",
+                h: "icon.card",
+                scale: "1.01",
+              },
+              cta: {
+                w: "icon.xl",
+                h: "icon.xl",
+                scale: "1.01",
+              },
+              inline: {
+                w: "icon.xs",
+                h: "icon.xs",
+                scale: "1.01",
+              },
+              hero: {
+                w: "icon.hero",
+                h: "icon.hero",
+                scale: "1",
+              },
+            },
           },
         },
       },
