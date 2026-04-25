@@ -1,5 +1,18 @@
 import { Link } from "react-router-dom";
 
+import {
+  AccountCircleIcon,
+  HelpCircleIcon,
+  ICON_HOVER_TOKENS,
+  ICON_MOTION,
+  ICON_STYLE,
+  PanelIcon,
+  PlayIcon,
+  SettingsIcon,
+  StepIcon,
+  VariableIcon,
+} from "@/shared";
+
 import { css } from "../../../styled-system/css";
 
 export default function MainPage() {
@@ -7,19 +20,19 @@ export default function MainPage() {
 
   const featureCards = [
     {
-      icon: "step",
+      Icon: StepIcon,
       title: "단계별 실행",
       description:
         "코드를 한 줄씩 실행하며 프로그램 상태 변화를 정밀하게 추적합니다. 논리 오류를 빠르게 찾아내는 데 최적화되어 있습니다.",
     },
     {
-      icon: "var",
+      Icon: VariableIcon,
       title: "실시간 변수 추적",
       description:
         "현재 스코프의 변수 값을 실행 단계와 함께 갱신해 보여줍니다. 데이터 구조 변화가 눈에 보이도록 설계했습니다.",
     },
     {
-      icon: "ui",
+      Icon: PanelIcon,
       title: "학습 친화적 UI",
       description:
         "교육자와 학습자 모두를 위한 패널 중심 화면입니다. 코드와 상태를 같은 시야에서 읽어 이해 속도를 높입니다.",
@@ -178,9 +191,9 @@ export default function MainPage() {
               })}
             >
               {[
-                { label: "설정", symbol: "⚙" },
-                { label: "도움말", symbol: "?" },
-                { label: "계정", symbol: "◉" },
+                { label: "설정", Icon: SettingsIcon },
+                { label: "도움말", Icon: HelpCircleIcon },
+                { label: "계정", Icon: AccountCircleIcon },
               ].map((action) => (
                 <button
                   key={action.label}
@@ -198,11 +211,14 @@ export default function MainPage() {
                     cursor: "pointer",
                     fontFamily: "code",
                     fontSize: "13px",
-                    transition: "all 180ms ease",
-                    _hover: { color: "primaryContainer", borderColor: "primaryContainer" },
+                    transition: ICON_MOTION.transition.interactive,
+                    _hover: {
+                      ...ICON_HOVER_TOKENS.ghost,
+                      borderColor: "primaryContainer",
+                    },
                   })}
                 >
-                  {action.symbol}
+                  <action.Icon className={css(ICON_STYLE.action)} />
                 </button>
               ))}
             </div>
@@ -313,7 +329,8 @@ export default function MainPage() {
                 },
               })}
             >
-              ▶ 디버깅 시작하기
+              <PlayIcon className={css(ICON_STYLE.cta)} />
+              <span>디버깅 시작하기</span>
             </Link>
 
             <Link
@@ -382,7 +399,7 @@ export default function MainPage() {
                   fontWeight: 600,
                 })}
               >
-                {feature.icon}
+                <feature.Icon className={css(ICON_STYLE.feature)} />
               </div>
               <h2
                 className={css({

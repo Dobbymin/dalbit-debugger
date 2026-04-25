@@ -1,13 +1,27 @@
+import {
+  AccountCircleIcon,
+  CodeIcon,
+  DebuggerIcon,
+  HelpCircleIcon,
+  HomeIcon,
+  ICON_HOVER_TOKENS,
+  ICON_MOTION,
+  ICON_STYLE,
+  PlayIcon,
+  SearchIcon,
+  SettingsIcon,
+} from "@/shared";
+
 import { css } from "../../../styled-system/css";
 
 export default function ExamplesPage() {
   const headerTabs = ["Debugger", "Library", "Documentation"] as const;
 
   const menuItems = [
-    { label: "Home", icon: "⌂", active: false },
-    { label: "Debugger", icon: ">_", active: false },
-    { label: "Snippets", icon: "#", active: true },
-    { label: "Settings", icon: "⚙", active: false },
+    { label: "Home", Icon: HomeIcon, active: false },
+    { label: "Debugger", Icon: DebuggerIcon, active: false },
+    { label: "Snippets", Icon: CodeIcon, active: true },
+    { label: "Settings", Icon: SettingsIcon, active: false },
   ] as const;
 
   const sections = [
@@ -160,14 +174,14 @@ export default function ExamplesPage() {
               fontSize: "12px",
             })}
           >
-            <span>⌕</span>
+            <SearchIcon className={css(ICON_STYLE.action)} />
             <span>Search examples...</span>
           </div>
 
           {[
-            { label: "settings", icon: "⚙" },
-            { label: "help", icon: "?" },
-            { label: "account", icon: "◉" },
+            { label: "settings", Icon: SettingsIcon },
+            { label: "help", Icon: HelpCircleIcon },
+            { label: "account", Icon: AccountCircleIcon },
           ].map((item) => (
             <button
               key={item.label}
@@ -181,10 +195,11 @@ export default function ExamplesPage() {
                 backgroundColor: "transparent",
                 color: "#657389",
                 cursor: "pointer",
-                _hover: { backgroundColor: "#eef3fb", color: "#1e4b91" },
+                transition: ICON_MOTION.transition.interactive,
+                _hover: ICON_HOVER_TOKENS.ghost,
               })}
             >
-              {item.icon}
+              <item.Icon className={css(ICON_STYLE.action)} />
             </button>
           ))}
 
@@ -323,12 +338,13 @@ export default function ExamplesPage() {
                   fontSize: "12px",
                   textAlign: "left",
                   cursor: "pointer",
+                  transition: ICON_MOTION.transition.interactive,
                   _hover: {
                     backgroundColor: item.active ? "#ffffff" : "#eaf0fa",
                   },
                 })}
               >
-                <span>{item.icon}</span>
+                <item.Icon className={css(ICON_STYLE.nav)} />
                 <span>{item.label}</span>
               </button>
             ))}
@@ -408,7 +424,7 @@ export default function ExamplesPage() {
                         gap: "8px",
                       })}
                     >
-                      <span className={css({ fontFamily: "code", fontSize: "15px" })}>{"</>"}</span>
+                      <CodeIcon className={css(ICON_STYLE.action)} />
                       {section.title}
                     </h2>
                     <span
@@ -556,6 +572,9 @@ export default function ExamplesPage() {
                           <button
                             type="button"
                             className={css({
+                              display: "inline-flex",
+                              alignItems: "center",
+                              gap: "6px",
                               height: "30px",
                               borderWidth: "1px",
                               borderStyle: "solid",
@@ -572,7 +591,8 @@ export default function ExamplesPage() {
                               },
                             })}
                           >
-                            ▶ 디버거에서 열기
+                            <PlayIcon className={css(ICON_STYLE.inline)} />
+                            <span>디버거에서 열기</span>
                           </button>
                         </div>
                       </article>

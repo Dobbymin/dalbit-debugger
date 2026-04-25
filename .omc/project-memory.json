@@ -160,9 +160,33 @@
       "type": "file"
     },
     {
+      "path": "",
+      "accessCount": 5,
+      "lastAccessed": 1777119363118,
+      "type": "directory"
+    },
+    {
       "path": "src/pages/main/MainPage.tsx",
       "accessCount": 3,
       "lastAccessed": 1776949431451,
+      "type": "file"
+    },
+    {
+      "path": "script/generate-icons.mjs",
+      "accessCount": 3,
+      "lastAccessed": 1777119230402,
+      "type": "file"
+    },
+    {
+      "path": ".claude/skills/icon-workflow/SKILL.md",
+      "accessCount": 3,
+      "lastAccessed": 1777119529486,
+      "type": "file"
+    },
+    {
+      "path": ".gemini/skills/icon-workflow/SKILL.md",
+      "accessCount": 3,
+      "lastAccessed": 1777119541391,
       "type": "file"
     },
     {
@@ -181,6 +205,12 @@
       "path": "src/pages/debugger/DebuggerPage.tsx",
       "accessCount": 2,
       "lastAccessed": 1776949432148,
+      "type": "file"
+    },
+    {
+      "path": "src/shared/index.ts",
+      "accessCount": 2,
+      "lastAccessed": 1777119522406,
       "type": "file"
     },
     {
@@ -211,6 +241,48 @@
       "path": "src/pages/main/index.ts",
       "accessCount": 1,
       "lastAccessed": 1776950176511,
+      "type": "file"
+    },
+    {
+      "path": "panda.config.ts",
+      "accessCount": 1,
+      "lastAccessed": 1777119085767,
+      "type": "file"
+    },
+    {
+      "path": "package.json",
+      "accessCount": 1,
+      "lastAccessed": 1777119086123,
+      "type": "file"
+    },
+    {
+      "path": "vite.config.ts",
+      "accessCount": 1,
+      "lastAccessed": 1777119086349,
+      "type": "file"
+    },
+    {
+      "path": ".claude/skills/git-workflow-specialist/SKILL.md",
+      "accessCount": 1,
+      "lastAccessed": 1777119370661,
+      "type": "file"
+    },
+    {
+      "path": ".gemini/skills/frontend-design/SKILL.md",
+      "accessCount": 1,
+      "lastAccessed": 1777119371144,
+      "type": "file"
+    },
+    {
+      "path": ".claude/skills/pr-writer/SKILL.md",
+      "accessCount": 1,
+      "lastAccessed": 1777122435575,
+      "type": "file"
+    },
+    {
+      "path": ".gemini/skills/pr-writer/SKILL.md",
+      "accessCount": 1,
+      "lastAccessed": 1777122444968,
       "type": "file"
     }
   ],
