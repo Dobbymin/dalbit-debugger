@@ -1,17 +1,17 @@
 export const ICON_SIZE = {
-  xs: "11px",
-  sm: "12px",
-  md: "14px",
-  lg: "16px",
-  xl: "18px",
-  card: "24px",
-  hero: "80px",
+  xs: "10px",
+  sm: "11px",
+  md: "12px",
+  lg: "14px",
+  xl: "15px",
+  card: "18px",
+  hero: "64px",
 } as const;
 
 export const ICON_WEIGHT = {
   regular: { transform: "scale(1)" },
-  medium: { transform: "scale(1.03)" },
-  boldFeel: { transform: "scale(1.08)" },
+  medium: { transform: "scale(1.01)" },
+  boldFeel: { transform: "scale(1.03)" },
 } as const;
 
 export const ICON_MOTION = {
