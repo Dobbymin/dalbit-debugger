@@ -1,6 +1,7 @@
 import {
   AccountCircleIcon,
   BackspaceIcon,
+  CodeIcon,
   DebuggerIcon,
   HelpCircleIcon,
   HomeIcon,
@@ -33,7 +34,7 @@ export default function DebuggerPage() {
   const leftMenus = [
     { label: "Home", Icon: HomeIcon },
     { label: "Debugger", Icon: DebuggerIcon },
-    { label: "Snippets", Icon: DebuggerIcon },
+    { label: "Snippets", Icon: CodeIcon },
     { label: "Settings", Icon: SettingsIcon },
   ] as const;
 
