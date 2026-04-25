@@ -272,6 +272,18 @@
       "accessCount": 1,
       "lastAccessed": 1777119371144,
       "type": "file"
+    },
+    {
+      "path": ".claude/skills/pr-writer/SKILL.md",
+      "accessCount": 1,
+      "lastAccessed": 1777122435575,
+      "type": "file"
+    },
+    {
+      "path": ".gemini/skills/pr-writer/SKILL.md",
+      "accessCount": 1,
+      "lastAccessed": 1777122444968,
+      "type": "file"
     }
   ],
   "userDirectives": []
