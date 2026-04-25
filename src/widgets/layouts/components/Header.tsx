@@ -5,7 +5,9 @@ import {
   HelpCircleIcon,
   ICON_HOVER_TOKENS,
   ICON_MOTION,
+  ICON_SIZE,
   ICON_STYLE,
+  ROUTE_PATHS,
   SearchIcon,
   SettingsIcon,
 } from "@/shared";
@@ -40,7 +42,7 @@ export const Header = ({ activeTab = "Debugger", sticky = false, showSearch = fa
         })}
       >
         <Link
-          to="/"
+          to={ROUTE_PATHS.MAIN}
           className={css({
             fontFamily: "headline",
             fontWeight: 800,
@@ -89,7 +91,7 @@ export const Header = ({ activeTab = "Debugger", sticky = false, showSearch = fa
         className={css({
           display: "flex",
           alignItems: "center",
-          gap: "8px",
+          gap: { base: "6px", md: "8px" },
         })}
       >
         {showSearch && (
@@ -111,13 +113,19 @@ export const Header = ({ activeTab = "Debugger", sticky = false, showSearch = fa
               fontSize: "12px",
             })}
           >
-            <SearchIcon className={css(ICON_STYLE.action)} />
+            <SearchIcon
+              className={css({
+                ...ICON_STYLE.nav,
+                width: ICON_SIZE.lg,
+                height: ICON_SIZE.lg,
+              })}
+            />
             <span>Search examples...</span>
           </div>
         )}
 
         <Link
-          to="/debugger"
+          to={ROUTE_PATHS.DEBUGGER}
           className={css({
             display: { base: "none", sm: "inline-flex" },
             alignItems: "center",
@@ -144,18 +152,30 @@ export const Header = ({ activeTab = "Debugger", sticky = false, showSearch = fa
             type="button"
             aria-label={item.label}
             className={css({
-              width: "28px",
-              height: "28px",
+              display: "inline-flex",
+              alignItems: "center",
+              justifyContent: "center",
+              width: { base: "32px", md: "34px" },
+              height: { base: "32px", md: "34px" },
+              padding: 0,
               border: "none",
               borderRadius: "full",
               backgroundColor: "transparent",
               color: "primary",
+              lineHeight: 0,
+              flexShrink: 0,
               cursor: "pointer",
               transition: ICON_MOTION.transition.interactive,
               _hover: ICON_HOVER_TOKENS.ghost,
             })}
           >
-            <item.Icon className={css(ICON_STYLE.action)} />
+            <item.Icon
+              className={css({
+                ...ICON_STYLE.action,
+                width: ICON_SIZE.xl,
+                height: ICON_SIZE.xl,
+              })}
+            />
           </button>
         ))}
       </div>
