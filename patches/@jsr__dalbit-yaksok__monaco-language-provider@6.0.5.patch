@@ -1,0 +1,20 @@
+diff --git a/provider/base.js b/provider/base.js
+index 8876088cc4141b6dd435b47e573e228fd1d8736e..c20aca868cfe8120c3a63a47ca536f4f7b40ed67 100755
+--- a/provider/base.js
++++ b/provider/base.js
+@@ -1,4 +1,4 @@
+-import { CodeFile } from "@jsr/dalbit-yaksok__core";
++import { YaksokSession } from "@jsr/dalbit-yaksok__core";
+ import { getCommentColorParts } from "../ast-to-colorize/get-comment-color-part.js";
+ import { nodeToColorTokens } from "../ast-to-colorize/index.js";
+ export class BaseProvider {
+@@ -13,7 +13,8 @@ export class BaseProvider {
+     this.colorPartsByLine = this.createColorParts(code);
+   }
+   createColorParts(code) {
+-    const codeFile = new CodeFile(code, this.TEMP_FILE_NAME);
++    const session = new YaksokSession();
++    const codeFile = session.addModule(this.TEMP_FILE_NAME, code);
+     const { ast } = codeFile;
+     const nodeColorParts = nodeToColorTokens(ast).toSorted((a, b)=>a.position.column - b.position.column);
+     const commentColorParts = getCommentColorParts(codeFile.tokens);
