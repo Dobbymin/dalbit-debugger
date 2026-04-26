@@ -16,6 +16,8 @@ RUN pnpm install --frozen-lockfile
 # Copy source files
 COPY . .
 
+RUN pnpm panda codegen
+
 # Build the application
 RUN pnpm build
 

@@ -13,7 +13,6 @@ pnpm-debug.log
 .prettierrc
 .prettierignore
 eslint.config.js
-panda.config.ts
 postcss.config.cjs
 README.md
 CLAUDE.md
