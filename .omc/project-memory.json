@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "lastScanned": 1777123577308,
+  "lastScanned": 1777212825300,
   "projectRoot": "/Users/gimgangmin/Desktop/Dev/homework/dalbit-debugger",
   "techStack": {
     "languages": [
@@ -80,35 +80,48 @@
   },
   "customNotes": [],
   "directoryMap": {
-    "chat": {
-      "path": "chat",
-      "purpose": null,
-      "fileCount": 0,
-      "lastAccessed": 1777123577290,
-      "keyFiles": []
+    "dist": {
+      "path": "dist",
+      "purpose": "Distribution/build output",
+      "fileCount": 3,
+      "lastAccessed": 1777212825270,
+      "keyFiles": [
+        "favicon.ico",
+        "index.html",
+        "logo.webp"
+      ]
     },
     "docs": {
       "path": "docs",
       "purpose": "Documentation",
       "fileCount": 0,
-      "lastAccessed": 1777123577290,
+      "lastAccessed": 1777212825271,
       "keyFiles": []
+    },
+    "patches": {
+      "path": "patches",
+      "purpose": null,
+      "fileCount": 1,
+      "lastAccessed": 1777212825274,
+      "keyFiles": [
+        "@jsr__dalbit-yaksok__monaco-language-provider@6.0.5.patch"
+      ]
     },
     "public": {
       "path": "public",
       "purpose": "Public files",
       "fileCount": 2,
-      "lastAccessed": 1777123577291,
+      "lastAccessed": 1777212825275,
       "keyFiles": [
-        "favicon.svg",
-        "icons.svg"
+        "favicon.ico",
+        "logo.webp"
       ]
     },
     "script": {
       "path": "script",
       "purpose": null,
       "fileCount": 1,
-      "lastAccessed": 1777123577291,
+      "lastAccessed": 1777212825275,
       "keyFiles": [
         "generate-icons.mjs"
       ]
@@ -117,7 +130,7 @@
       "path": "src",
       "purpose": "Source code",
       "fileCount": 4,
-      "lastAccessed": 1777123577291,
+      "lastAccessed": 1777212825276,
       "keyFiles": [
         "App.css",
         "App.tsx",
@@ -129,17 +142,27 @@
       "path": "styled-system",
       "purpose": null,
       "fileCount": 2,
-      "lastAccessed": 1777123577294,
+      "lastAccessed": 1777212825276,
       "keyFiles": [
         "helpers.mjs",
         "styles.css"
+      ]
+    },
+    "dist/assets": {
+      "path": "dist/assets",
+      "purpose": "Static assets",
+      "fileCount": 2,
+      "lastAccessed": 1777212825277,
+      "keyFiles": [
+        "index-BJojssLS.css",
+        "index-DC5sHAgZ.js"
       ]
     },
     "src/app": {
       "path": "src/app",
       "purpose": "Application code",
       "fileCount": 1,
-      "lastAccessed": 1777123577295,
+      "lastAccessed": 1777212825277,
       "keyFiles": [
         "index.ts"
       ]
@@ -148,7 +171,7 @@
       "path": "src/pages",
       "purpose": "Page components",
       "fileCount": 1,
-      "lastAccessed": 1777123577296,
+      "lastAccessed": 1777212825277,
       "keyFiles": [
         "index.ts"
       ]
@@ -157,7 +180,7 @@
       "path": "styled-system/types",
       "purpose": "Type definitions",
       "fileCount": 13,
-      "lastAccessed": 1777123577296,
+      "lastAccessed": 1777212825277,
       "keyFiles": [
         "composition.d.ts",
         "conditions.d.ts",
@@ -168,32 +191,32 @@
   "hotPaths": [
     {
       "path": "",
-      "accessCount": 31,
-      "lastAccessed": 1777191403134,
+      "accessCount": 41,
+      "lastAccessed": 1777213944801,
       "type": "directory"
     },
     {
       "path": "docs/common/prd.md",
-      "accessCount": 21,
-      "lastAccessed": 1777170199996,
+      "accessCount": 28,
+      "lastAccessed": 1777213808344,
       "type": "file"
     },
     {
       "path": "src/pages/debugger/DebuggerPage.tsx",
-      "accessCount": 20,
-      "lastAccessed": 1777192139813,
-      "type": "file"
-    },
-    {
-      "path": "src/pages/examples/ExamplesPage.tsx",
-      "accessCount": 17,
-      "lastAccessed": 1777190730914,
+      "accessCount": 22,
+      "lastAccessed": 1777213701120,
       "type": "file"
     },
     {
       "path": "CLAUDE.md",
-      "accessCount": 16,
-      "lastAccessed": 1777192163472,
+      "accessCount": 21,
+      "lastAccessed": 1777213734035,
+      "type": "file"
+    },
+    {
+      "path": "src/pages/examples/ExamplesPage.tsx",
+      "accessCount": 18,
+      "lastAccessed": 1777208711785,
       "type": "file"
     },
     {
@@ -204,20 +227,26 @@
     },
     {
       "path": "docs/rule/fsd-rule.md",
-      "accessCount": 13,
-      "lastAccessed": 1776950850407,
+      "accessCount": 15,
+      "lastAccessed": 1777213700715,
       "type": "file"
     },
     {
       "path": "src/pages/main/MainPage.tsx",
-      "accessCount": 12,
-      "lastAccessed": 1777168533638,
+      "accessCount": 13,
+      "lastAccessed": 1777208711461,
       "type": "file"
     },
     {
       "path": "src/widgets/layouts/ui/RootLayout.tsx",
       "accessCount": 11,
       "lastAccessed": 1777168302613,
+      "type": "file"
+    },
+    {
+      "path": "src/app/routes/Routes.tsx",
+      "accessCount": 9,
+      "lastAccessed": 1777213701402,
       "type": "file"
     },
     {
@@ -239,9 +268,21 @@
       "type": "file"
     },
     {
-      "path": "src/app/routes/Routes.tsx",
+      "path": "src/shared/constants/route-path.ts",
+      "accessCount": 5,
+      "lastAccessed": 1777211502094,
+      "type": "file"
+    },
+    {
+      "path": "docs/rule/project-rule.md",
+      "accessCount": 5,
+      "lastAccessed": 1777213809187,
+      "type": "file"
+    },
+    {
+      "path": "package.json",
       "accessCount": 4,
-      "lastAccessed": 1777139157532,
+      "lastAccessed": 1777213684920,
       "type": "file"
     },
     {
@@ -281,21 +322,15 @@
       "type": "file"
     },
     {
-      "path": "package.json",
+      "path": "src/pages/not-found/NotFound.tsx",
       "accessCount": 3,
-      "lastAccessed": 1777194081654,
+      "lastAccessed": 1777211489616,
       "type": "file"
     },
     {
       "path": "src/shared/index.ts",
-      "accessCount": 2,
-      "lastAccessed": 1777119522406,
-      "type": "file"
-    },
-    {
-      "path": "src/shared/constants/route-path.ts",
-      "accessCount": 2,
-      "lastAccessed": 1777139157887,
+      "accessCount": 3,
+      "lastAccessed": 1777211492981,
       "type": "file"
     },
     {
@@ -317,9 +352,15 @@
       "type": "file"
     },
     {
-      "path": "docs/rule/project-rule.md",
-      "accessCount": 1,
-      "lastAccessed": 1776945556699,
+      "path": "src/shared",
+      "accessCount": 2,
+      "lastAccessed": 1777211405042,
+      "type": "directory"
+    },
+    {
+      "path": "docs/log/agents/01-header-컴포넌트-분리-및-stop-hook-수정.md",
+      "accessCount": 2,
+      "lastAccessed": 1777213737839,
       "type": "file"
     },
     {
@@ -365,12 +406,6 @@
       "type": "directory"
     },
     {
-      "path": "src/pages/not-found/NotFound.tsx",
-      "accessCount": 1,
-      "lastAccessed": 1777125621413,
-      "type": "file"
-    },
-    {
       "path": "src/pages",
       "accessCount": 1,
       "lastAccessed": 1777126538944,
@@ -383,22 +418,10 @@
       "type": "directory"
     },
     {
-      "path": "docs/log/agents/01-header-컴포넌트-분리-및-stop-hook-수정.md",
-      "accessCount": 1,
-      "lastAccessed": 1777126793834,
-      "type": "file"
-    },
-    {
       "path": "docs/log/agents/02-header-중복-렌더링-제거.md",
       "accessCount": 1,
       "lastAccessed": 1777127803239,
       "type": "file"
-    },
-    {
-      "path": "src/shared",
-      "accessCount": 1,
-      "lastAccessed": 1777128625995,
-      "type": "directory"
     },
     {
       "path": "docs/log/agents/04-sidebar-공용-컴포넌트-분리.md",
