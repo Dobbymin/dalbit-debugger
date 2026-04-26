@@ -13,11 +13,14 @@ export function DebuggerVariablesPanel({ variables }: DebuggerVariablesPanelProp
     <aside
       className={css({
         width: { base: "100%", lg: "320px" },
+        borderLeftWidth: { base: "0", lg: "1px" },
+        borderLeftStyle: "solid",
+        borderLeftColor: "outlineVariant",
         borderTopWidth: { base: "1px", lg: "0" },
         borderTopStyle: "solid",
         borderTopColor: "outlineVariant",
         flexShrink: 0,
-        backgroundColor: "surfaceBright",
+        backgroundColor: "surfaceContainerLowest",
         display: "flex",
         flexDirection: "column",
         minHeight: { base: "180px", lg: "0" },
@@ -25,31 +28,40 @@ export function DebuggerVariablesPanel({ variables }: DebuggerVariablesPanelProp
     >
       <div
         className={css({
-          height: "36px",
+          height: "40px",
           borderBottomWidth: "1px",
           borderBottomStyle: "solid",
           borderBottomColor: "outlineVariant",
+          backgroundColor: "surface",
           display: "flex",
           alignItems: "center",
           justifyContent: "space-between",
-          paddingX: "12px",
-          fontFamily: "code",
-          fontSize: "12px",
-          color: "onSurfaceVariant",
+          paddingX: "panelPadding",
         })}
       >
-        <span>변수 상태</span>
+        <h3
+          className={css({
+            margin: 0,
+            fontFamily: "code",
+            fontSize: "12px",
+            fontWeight: 500,
+            color: "onSurfaceVariant",
+            letterSpacing: "0.05em",
+            textTransform: "uppercase",
+          })}
+        >
+          Variables (Scope)
+        </h3>
         <SparkIcon className={icon({ usage: "control" })} />
       </div>
 
       <div
         className={css({
-          padding: "8px",
+          padding: "panelPadding",
           display: "flex",
           flexDirection: "column",
-          gap: "4px",
+          gap: "8px",
           overflow: "auto",
-          fontFamily: "code",
         })}
       >
         {variables.length === 0 ? (
@@ -59,6 +71,12 @@ export function DebuggerVariablesPanel({ variables }: DebuggerVariablesPanelProp
               textAlign: "center",
               color: "outline",
               fontSize: "12px",
+              fontFamily: "code",
+              borderWidth: "1px",
+              borderStyle: "dashed",
+              borderColor: "outlineVariant",
+              borderRadius: "DEFAULT",
+              backgroundColor: "surface",
             })}
           >
             활성 변수 없음
@@ -68,33 +86,53 @@ export function DebuggerVariablesPanel({ variables }: DebuggerVariablesPanelProp
             <div
               key={item.name}
               className={css({
-                height: "34px",
-                borderRadius: "DEFAULT",
-                paddingX: "8px",
                 display: "flex",
-                alignItems: "center",
                 justifyContent: "space-between",
-                _hover: { backgroundColor: "surfaceContainer" },
+                alignItems: "center",
+                padding: "10px",
+                borderRadius: "DEFAULT",
+                borderWidth: "1px",
+                borderStyle: "solid",
+                borderColor: "outlineVariant",
+                backgroundColor: "surface",
               })}
             >
-              <span>{item.name}</span>
               <span
                 className={css({
-                  display: "inline-flex",
-                  alignItems: "center",
+                  color: "onSurface",
+                  fontSize: "14px",
+                  fontFamily: "code",
+                })}
+              >
+                {item.name}
+              </span>
+              <div
+                className={css({
+                  display: "flex",
+                  alignItems: "baseline",
                   gap: "6px",
-                  fontSize: "12px",
                 })}
               >
                 <strong
                   className={css({
                     color: item.tone === "primary" ? "primary" : "secondary",
+                    fontSize: "14px",
+                    fontFamily: "code",
                   })}
                 >
                   {item.value}
                 </strong>
-                <span className={css({ color: "outline" })}>({item.kind})</span>
-              </span>
+                <span
+                  className={css({
+                    color: "outline",
+                    fontSize: "11px",
+                    fontFamily: "code",
+                    fontStyle: "italic",
+                  })}
+                >
+                  {item.kind}
+                </span>
+              </div>
             </div>
           ))
         )}

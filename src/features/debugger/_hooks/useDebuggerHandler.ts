@@ -15,7 +15,7 @@ export const useDebuggerHandler = () => {
   const manager = useDebugger();
 
   // Level 2: 부수 효과 및 파생 상태 (정렬된 추상화)
-  useDebuggerSync();
+  useDebuggerSync(state.code, actions.setCode);
   const progressWidth = useDebuggerProgress(state.code, state.currentLine);
 
   return {
