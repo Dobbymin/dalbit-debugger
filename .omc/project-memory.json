@@ -173,6 +173,18 @@
       "type": "file"
     },
     {
+      "path": "src/pages/examples/ExamplesPage.tsx",
+      "accessCount": 16,
+      "lastAccessed": 1777137503510,
+      "type": "file"
+    },
+    {
+      "path": "src/pages/debugger/DebuggerPage.tsx",
+      "accessCount": 15,
+      "lastAccessed": 1777137453509,
+      "type": "file"
+    },
+    {
       "path": "docs/rule/fsd-rule.md",
       "accessCount": 13,
       "lastAccessed": 1776950850407,
@@ -186,9 +198,15 @@
     },
     {
       "path": "",
-      "accessCount": 11,
-      "lastAccessed": 1777127785246,
+      "accessCount": 13,
+      "lastAccessed": 1777139355934,
       "type": "directory"
+    },
+    {
+      "path": "src/widgets/layouts/components/Header.tsx",
+      "accessCount": 12,
+      "lastAccessed": 1777166305877,
+      "type": "file"
     },
     {
       "path": "src/pages/main/MainPage.tsx",
@@ -197,15 +215,9 @@
       "type": "file"
     },
     {
-      "path": "src/pages/debugger/DebuggerPage.tsx",
-      "accessCount": 9,
-      "lastAccessed": 1777127233789,
-      "type": "file"
-    },
-    {
-      "path": "src/pages/examples/ExamplesPage.tsx",
-      "accessCount": 9,
-      "lastAccessed": 1777127240606,
+      "path": "src/widgets/layouts/ui/RootLayout.tsx",
+      "accessCount": 10,
+      "lastAccessed": 1777166542651,
       "type": "file"
     },
     {
@@ -221,9 +233,15 @@
       "type": "file"
     },
     {
-      "path": "src/widgets/layouts/ui/RootLayout.tsx",
+      "path": "src/widgets/layouts/components/Sidebar.tsx",
+      "accessCount": 5,
+      "lastAccessed": 1777166431302,
+      "type": "file"
+    },
+    {
+      "path": "src/app/routes/Routes.tsx",
       "accessCount": 4,
-      "lastAccessed": 1777127335109,
+      "lastAccessed": 1777139157532,
       "type": "file"
     },
     {
@@ -251,12 +269,6 @@
       "type": "file"
     },
     {
-      "path": "src/app/routes/Routes.tsx",
-      "accessCount": 3,
-      "lastAccessed": 1777127060238,
-      "type": "file"
-    },
-    {
       "path": "src/shared/index.ts",
       "accessCount": 2,
       "lastAccessed": 1777119522406,
@@ -269,6 +281,24 @@
       "type": "file"
     },
     {
+      "path": "src/shared/constants/route-path.ts",
+      "accessCount": 2,
+      "lastAccessed": 1777139157887,
+      "type": "file"
+    },
+    {
+      "path": "src/widgets/layouts/ui/PageLayout.tsx",
+      "accessCount": 2,
+      "lastAccessed": 1777139161469,
+      "type": "file"
+    },
+    {
+      "path": "src/shared/constants/icon-style.ts",
+      "accessCount": 2,
+      "lastAccessed": 1777139199270,
+      "type": "file"
+    },
+    {
       "path": "docs/rule/project-rule.md",
       "accessCount": 1,
       "lastAccessed": 1776945556699,
@@ -278,12 +308,6 @@
       "path": "docs/rule/hooks-rule.md",
       "accessCount": 1,
       "lastAccessed": 1776945557491,
-      "type": "file"
-    },
-    {
-      "path": "src/shared/constants/route-path.ts",
-      "accessCount": 1,
-      "lastAccessed": 1776947618583,
       "type": "file"
     },
     {
@@ -347,12 +371,6 @@
       "type": "file"
     },
     {
-      "path": "src/widgets/layouts/components/Header.tsx",
-      "accessCount": 1,
-      "lastAccessed": 1777125772578,
-      "type": "file"
-    },
-    {
       "path": "src/pages",
       "accessCount": 1,
       "lastAccessed": 1777126538944,
@@ -374,6 +392,42 @@
       "path": "docs/log/agents/02-header-중복-렌더링-제거.md",
       "accessCount": 1,
       "lastAccessed": 1777127803239,
+      "type": "file"
+    },
+    {
+      "path": "src/shared",
+      "accessCount": 1,
+      "lastAccessed": 1777128625995,
+      "type": "directory"
+    },
+    {
+      "path": "docs/log/agents/04-sidebar-공용-컴포넌트-분리.md",
+      "accessCount": 1,
+      "lastAccessed": 1777137542755,
+      "type": "file"
+    },
+    {
+      "path": "docs/log/agents/05-header-sidebar-네비게이션-수정.md",
+      "accessCount": 1,
+      "lastAccessed": 1777139372787,
+      "type": "file"
+    },
+    {
+      "path": "docs/log/agents/06-header-아이콘-제거-및-activetab-기본값-수정.md",
+      "accessCount": 1,
+      "lastAccessed": 1777166031782,
+      "type": "file"
+    },
+    {
+      "path": "docs/log/agents/07-header-검색바-제거-및-sidebar-레이블-수정.md",
+      "accessCount": 1,
+      "lastAccessed": 1777166463291,
+      "type": "file"
+    },
+    {
+      "path": "src/index.css",
+      "accessCount": 1,
+      "lastAccessed": 1777166516014,
       "type": "file"
     }
   ],
