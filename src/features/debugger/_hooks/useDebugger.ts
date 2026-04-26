@@ -169,6 +169,7 @@ export const useDebugger = () => {
           addOutput(`[에러] ${message}`);
           stopAutoRun();
         },
+        stdin: async () => "",
         events: {
           runningCode: (start, _end, scope) => {
             if (sessionId !== sessionIdRef.current) {

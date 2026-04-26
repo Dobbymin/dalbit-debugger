@@ -19,5 +19,5 @@ export const useDebuggerSync = (code: string, setCode: (code: string) => void) =
     if (!code) {
       setCode(FALLBACK_EXAMPLE_CODE);
     }
-  }, [code, initialCodeFromLocation, setCode]);
+  }, [initialCodeFromLocation, setCode]); // eslint-disable-line react-hooks/exhaustive-deps
 };
