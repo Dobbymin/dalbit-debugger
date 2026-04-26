@@ -179,9 +179,21 @@
       "type": "file"
     },
     {
+      "path": "",
+      "accessCount": 16,
+      "lastAccessed": 1777168921131,
+      "type": "directory"
+    },
+    {
       "path": "src/pages/debugger/DebuggerPage.tsx",
       "accessCount": 15,
       "lastAccessed": 1777137453509,
+      "type": "file"
+    },
+    {
+      "path": "src/widgets/layouts/components/Header.tsx",
+      "accessCount": 15,
+      "lastAccessed": 1777169400853,
       "type": "file"
     },
     {
@@ -197,27 +209,15 @@
       "type": "file"
     },
     {
-      "path": "",
-      "accessCount": 13,
-      "lastAccessed": 1777139355934,
-      "type": "directory"
-    },
-    {
-      "path": "src/widgets/layouts/components/Header.tsx",
-      "accessCount": 12,
-      "lastAccessed": 1777166305877,
-      "type": "file"
-    },
-    {
       "path": "src/pages/main/MainPage.tsx",
-      "accessCount": 10,
-      "lastAccessed": 1777127222730,
+      "accessCount": 12,
+      "lastAccessed": 1777168533638,
       "type": "file"
     },
     {
       "path": "src/widgets/layouts/ui/RootLayout.tsx",
-      "accessCount": 10,
-      "lastAccessed": 1777166542651,
+      "accessCount": 11,
+      "lastAccessed": 1777168302613,
       "type": "file"
     },
     {
@@ -269,15 +269,15 @@
       "type": "file"
     },
     {
-      "path": "src/shared/index.ts",
-      "accessCount": 2,
-      "lastAccessed": 1777119522406,
+      "path": "src/widgets/layouts/index.ts",
+      "accessCount": 3,
+      "lastAccessed": 1777168285601,
       "type": "file"
     },
     {
-      "path": "src/widgets/layouts/index.ts",
+      "path": "src/shared/index.ts",
       "accessCount": 2,
-      "lastAccessed": 1777126552733,
+      "lastAccessed": 1777119522406,
       "type": "file"
     },
     {
@@ -299,6 +299,12 @@
       "type": "file"
     },
     {
+      "path": "panda.config.ts",
+      "accessCount": 2,
+      "lastAccessed": 1777168447437,
+      "type": "file"
+    },
+    {
       "path": "docs/rule/project-rule.md",
       "accessCount": 1,
       "lastAccessed": 1776945556699,
@@ -314,12 +320,6 @@
       "path": "src/pages/main/index.ts",
       "accessCount": 1,
       "lastAccessed": 1776950176511,
-      "type": "file"
-    },
-    {
-      "path": "panda.config.ts",
-      "accessCount": 1,
-      "lastAccessed": 1777119085767,
       "type": "file"
     },
     {
@@ -428,6 +428,42 @@
       "path": "src/index.css",
       "accessCount": 1,
       "lastAccessed": 1777166516014,
+      "type": "file"
+    },
+    {
+      "path": "src/widgets/layouts/types.ts",
+      "accessCount": 1,
+      "lastAccessed": 1777168292461,
+      "type": "file"
+    },
+    {
+      "path": "src",
+      "accessCount": 1,
+      "lastAccessed": 1777168443009,
+      "type": "directory"
+    },
+    {
+      "path": "src/widgets/layouts/types/active-tab.types.ts",
+      "accessCount": 1,
+      "lastAccessed": 1777168447776,
+      "type": "file"
+    },
+    {
+      "path": "docs/log/agents/08-debuggerpage-전체화면-레이아웃-수정.md",
+      "accessCount": 1,
+      "lastAccessed": 1777168722187,
+      "type": "file"
+    },
+    {
+      "path": "docs/log/agents/09-activetab-타입-중복-제거-및-playicon-레시피-적용.md",
+      "accessCount": 1,
+      "lastAccessed": 1777168734671,
+      "type": "file"
+    },
+    {
+      "path": "src/shared/_assets/icon/debugger.svg",
+      "accessCount": 1,
+      "lastAccessed": 1777168926020,
       "type": "file"
     }
   ],
