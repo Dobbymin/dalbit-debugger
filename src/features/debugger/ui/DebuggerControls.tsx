@@ -77,15 +77,13 @@ export function DebuggerControls({
     <div
       className={css({
         display: "flex",
-        justifyContent: "space-between",
-        alignItems: "center",
+        flexDirection: "column",
         borderBottomWidth: "1px",
         borderBottomStyle: "solid",
         borderBottomColor: "outlineVariant",
         paddingX: { base: "8px", md: "24px" },
         paddingY: "8px",
-        gap: "10px",
-        overflowX: "auto",
+        gap: "6px",
         backgroundColor: "surfaceBright",
       })}
     >
@@ -93,8 +91,8 @@ export function DebuggerControls({
         className={css({
           display: "flex",
           alignItems: "center",
-          gap: "8px",
-          flexShrink: 0,
+          flexWrap: "wrap",
+          gap: "6px",
         })}
       >
         {controls.map((control) => (
@@ -109,9 +107,10 @@ export function DebuggerControls({
               borderColor: control.active ? "primary" : "outlineVariant",
               borderRadius: "DEFAULT",
               height: "30px",
-              paddingX: "10px",
+              paddingX: { base: "8px", md: "10px" },
               display: "inline-flex",
               alignItems: "center",
+              justifyContent: "center",
               gap: "6px",
               backgroundColor: "transparent",
               color: !control.active ? "outline" : control.label === "정지" ? "error" : "onSurface",
@@ -124,10 +123,19 @@ export function DebuggerControls({
             })}
           >
             <control.Icon className={icon({ usage: "control" })} />
-            <span>{control.label}</span>
+            <span className={css({ display: { base: "none", sm: "inline" } })}>{control.label}</span>
           </button>
         ))}
+      </div>
 
+      <div
+        className={css({
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "space-between",
+          gap: "8px",
+        })}
+      >
         <label
           className={css({
             display: "inline-flex",
@@ -142,28 +150,33 @@ export function DebuggerControls({
             color: "onSurface",
             fontFamily: "code",
             fontSize: "12px",
+            flex: 1,
+            minWidth: 0,
           })}
         >
-          <span>실행 속도</span>
+          <span className={css({ whiteSpace: "nowrap" })}>실행 속도</span>
           <input
             value={autoRunSpeed}
             onChange={(event) => onAutoRunSpeedChange(Number(event.target.value))}
             type="range"
             min={1}
             max={10}
+            style={{ flex: 1, minWidth: 0 }}
           />
         </label>
-      </div>
 
-      <div
-        className={css({
-          fontFamily: "code",
-          fontSize: "12px",
-          color: "primary",
-          fontWeight: 600,
-        })}
-      >
-        상태: {status.toUpperCase()}
+        <div
+          className={css({
+            fontFamily: "code",
+            fontSize: "12px",
+            color: "primary",
+            fontWeight: 600,
+            flexShrink: 0,
+            whiteSpace: "nowrap",
+          })}
+        >
+          상태: {status.toUpperCase()}
+        </div>
       </div>
     </div>
   );

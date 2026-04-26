@@ -35,6 +35,7 @@ export default function DebuggerPage() {
       className={css({
         flex: 1,
         minHeight: 0,
+        minWidth: 0,
         backgroundColor: "background",
         color: "onBackground",
         display: "flex",
@@ -87,6 +88,7 @@ export default function DebuggerPage() {
             flex: 1,
             minHeight: "0",
             flexDirection: { base: "column", lg: "row" },
+            overflowY: { base: "auto", lg: "visible" },
           })}
         >
           <DebuggerEditorPane

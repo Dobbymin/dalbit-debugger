@@ -13,7 +13,7 @@ export function DebuggerOutputPanel({ output, onClearOutput }: DebuggerOutputPan
   return (
     <section
       className={css({
-        height: { base: "180px", md: "200px" },
+        height: { base: "150px", md: "200px" },
         borderTopWidth: "1px",
         borderTopStyle: "solid",
         borderTopColor: "outlineVariant",
@@ -60,7 +60,7 @@ export function DebuggerOutputPanel({ output, onClearOutput }: DebuggerOutputPan
 
       <div
         className={css({
-          padding: "12px",
+          padding: { base: "8px", md: "12px" },
           fontFamily: "code",
           fontSize: "12px",
           color: "onSurface",

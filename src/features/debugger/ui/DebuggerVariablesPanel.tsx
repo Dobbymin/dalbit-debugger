@@ -23,7 +23,7 @@ export function DebuggerVariablesPanel({ variables }: DebuggerVariablesPanelProp
         backgroundColor: "surfaceContainerLowest",
         display: "flex",
         flexDirection: "column",
-        minHeight: { base: "180px", lg: "0" },
+        minHeight: { base: "150px", lg: "0" },
       })}
     >
       <div
@@ -62,6 +62,8 @@ export function DebuggerVariablesPanel({ variables }: DebuggerVariablesPanelProp
           flexDirection: "column",
           gap: "8px",
           overflow: "auto",
+          flex: 1,
+          minHeight: 0,
         })}
       >
         {variables.length === 0 ? (
