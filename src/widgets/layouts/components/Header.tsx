@@ -29,15 +29,28 @@ export const Header = ({ activeTab, sticky = false }: Props) => {
         <Link
           to={ROUTE_PATHS.MAIN}
           className={css({
-            fontFamily: "headline",
-            fontWeight: 800,
-            fontSize: "18px",
-            color: "primaryContainer",
+            display: "flex",
+            alignItems: "center",
+            gap: "8px",
             textDecoration: "none",
-            whiteSpace: "nowrap",
           })}
         >
-          Dalbit Debugger
+          <img
+            src="/logo.webp"
+            alt="Dalbit Debugger logo"
+            className={css({ width: "32px", height: "32px", objectFit: "contain" })}
+          />
+          <span
+            className={css({
+              fontFamily: "headline",
+              fontWeight: 800,
+              fontSize: "18px",
+              color: "primaryContainer",
+              whiteSpace: "nowrap",
+            })}
+          >
+            Dalbit Debugger
+          </span>
         </Link>
 
         <nav
