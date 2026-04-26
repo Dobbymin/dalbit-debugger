@@ -50,8 +50,8 @@ const extractVariables = (scope: Scope): VariableRow[] => {
               tone: name.startsWith("_") ? "secondary" : "primary",
             });
           }
-        } catch (e) {
-          console.error(`변수 ${name} 추출 실패:`, e);
+        } catch {
+          // 변수 추출 실패 시 무시하고 continue
         }
       }
     }
