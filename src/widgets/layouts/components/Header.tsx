@@ -3,8 +3,7 @@ import { Link } from "react-router-dom";
 import { ROUTE_PATHS } from "@/shared";
 
 import { css } from "../../../../styled-system/css";
-
-type ActiveTab = "Debugger" | "Library";
+import type { ActiveTab } from "../types";
 
 const NAV_TABS: { label: ActiveTab; path: string }[] = [
   { label: "Debugger", path: ROUTE_PATHS.DEBUGGER },

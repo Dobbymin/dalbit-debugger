@@ -4,8 +4,7 @@ import { ROUTE_PATHS } from "@/shared";
 
 import { css } from "../../../../styled-system/css";
 import { Header } from "../components";
-
-type ActiveTab = "Debugger" | "Library";
+import type { ActiveTab } from "../types";
 
 const ROUTE_HEADER_CONFIG: Record<string, { activeTab?: ActiveTab; sticky?: boolean }> = {
   [ROUTE_PATHS.MAIN]: { sticky: true },
