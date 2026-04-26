@@ -17,3 +17,4 @@ package-lock.json
 test-results
 playwright-report
 docs/log/stitch
+pnpm-lock.yaml
