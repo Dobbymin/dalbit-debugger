@@ -1,17 +1,8 @@
 import { Link } from "react-router-dom";
 
-import {
-  AccountCircleIcon,
-  HelpCircleIcon,
-  ICON_HOVER_TOKENS,
-  ICON_MOTION,
-  ROUTE_PATHS,
-  SearchIcon,
-  SettingsIcon,
-} from "@/shared";
+import { ROUTE_PATHS } from "@/shared";
 
-import { css, cx } from "../../../../styled-system/css";
-import { icon } from "../../../../styled-system/recipes";
+import { css } from "../../../../styled-system/css";
 
 type ActiveTab = "Debugger" | "Library";
 
@@ -20,19 +11,12 @@ const NAV_TABS: { label: ActiveTab; path: string }[] = [
   { label: "Library", path: ROUTE_PATHS.EXAMPLES },
 ];
 
-const ICON_ACTIONS = [
-  { label: "설정", Icon: SettingsIcon },
-  { label: "도움말", Icon: HelpCircleIcon },
-  { label: "계정", Icon: AccountCircleIcon },
-] as const;
-
 type Props = {
   activeTab?: ActiveTab;
   sticky?: boolean;
-  showSearch?: boolean;
 };
 
-export const Header = ({ activeTab = "Debugger", sticky = false, showSearch = false }: Props) => {
+export const Header = ({ activeTab, sticky = false }: Props) => {
   const headerContent = (
     <>
       <div
@@ -86,81 +70,6 @@ export const Header = ({ activeTab = "Debugger", sticky = false, showSearch = fa
             </Link>
           ))}
         </nav>
-      </div>
-
-      <div
-        className={css({
-          display: "flex",
-          alignItems: "center",
-          gap: { base: "6px", md: "8px" },
-        })}
-      >
-        {showSearch && (
-          <div
-            className={css({
-              display: { base: "none", lg: "flex" },
-              alignItems: "center",
-              gap: "6px",
-              height: "34px",
-              width: "220px",
-              borderWidth: "1px",
-              borderStyle: "solid",
-              borderColor: "outlineVariant",
-              borderRadius: "DEFAULT",
-              paddingX: "10px",
-              backgroundColor: "surfaceContainerLowest",
-              color: "onSurfaceVariant",
-              fontFamily: "code",
-              fontSize: "12px",
-            })}
-          >
-            <SearchIcon
-              className={cx(
-                icon({ usage: "nav" }),
-                css({
-                  w: "icon.lg",
-                  h: "icon.lg",
-                }),
-              )}
-            />
-            <span>Search examples...</span>
-          </div>
-        )}
-
-        {ICON_ACTIONS.map((item) => (
-          <button
-            key={item.label}
-            type="button"
-            aria-label={item.label}
-            className={css({
-              display: "inline-flex",
-              alignItems: "center",
-              justifyContent: "center",
-              width: { base: "32px", md: "34px" },
-              height: { base: "32px", md: "34px" },
-              padding: 0,
-              border: "none",
-              borderRadius: "full",
-              backgroundColor: "transparent",
-              color: "primary",
-              lineHeight: 0,
-              flexShrink: 0,
-              cursor: "pointer",
-              transition: ICON_MOTION.transition.interactive,
-              _hover: ICON_HOVER_TOKENS.ghost,
-            })}
-          >
-            <item.Icon
-              className={cx(
-                icon({ usage: "action" }),
-                css({
-                  w: "icon.lg",
-                  h: "icon.lg",
-                }),
-              )}
-            />
-          </button>
-        ))}
       </div>
     </>
   );
