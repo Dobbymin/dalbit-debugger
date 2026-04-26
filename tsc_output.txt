@@ -1,0 +1,4 @@
+
+> dalbit-debugger@0.0.0 tsc /Users/gimgangmin/Desktop/Dev/homework/dalbit-debugger
+> tsc --noEmit
+

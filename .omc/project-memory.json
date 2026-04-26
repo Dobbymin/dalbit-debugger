@@ -167,27 +167,33 @@
   },
   "hotPaths": [
     {
+      "path": "",
+      "accessCount": 31,
+      "lastAccessed": 1777191403134,
+      "type": "directory"
+    },
+    {
       "path": "docs/common/prd.md",
+      "accessCount": 21,
+      "lastAccessed": 1777170199996,
+      "type": "file"
+    },
+    {
+      "path": "src/pages/debugger/DebuggerPage.tsx",
       "accessCount": 20,
-      "lastAccessed": 1776950788953,
+      "lastAccessed": 1777192139813,
       "type": "file"
     },
     {
       "path": "src/pages/examples/ExamplesPage.tsx",
-      "accessCount": 16,
-      "lastAccessed": 1777137503510,
+      "accessCount": 17,
+      "lastAccessed": 1777190730914,
       "type": "file"
     },
     {
-      "path": "",
+      "path": "CLAUDE.md",
       "accessCount": 16,
-      "lastAccessed": 1777168921131,
-      "type": "directory"
-    },
-    {
-      "path": "src/pages/debugger/DebuggerPage.tsx",
-      "accessCount": 15,
-      "lastAccessed": 1777137453509,
+      "lastAccessed": 1777192163472,
       "type": "file"
     },
     {
@@ -200,12 +206,6 @@
       "path": "docs/rule/fsd-rule.md",
       "accessCount": 13,
       "lastAccessed": 1776950850407,
-      "type": "file"
-    },
-    {
-      "path": "CLAUDE.md",
-      "accessCount": 13,
-      "lastAccessed": 1777124360026,
       "type": "file"
     },
     {
@@ -275,6 +275,18 @@
       "type": "file"
     },
     {
+      "path": "src/shared/constants/icon-style.ts",
+      "accessCount": 3,
+      "lastAccessed": 1777170953643,
+      "type": "file"
+    },
+    {
+      "path": "package.json",
+      "accessCount": 3,
+      "lastAccessed": 1777194081654,
+      "type": "file"
+    },
+    {
       "path": "src/shared/index.ts",
       "accessCount": 2,
       "lastAccessed": 1777119522406,
@@ -293,15 +305,15 @@
       "type": "file"
     },
     {
-      "path": "src/shared/constants/icon-style.ts",
-      "accessCount": 2,
-      "lastAccessed": 1777139199270,
-      "type": "file"
-    },
-    {
       "path": "panda.config.ts",
       "accessCount": 2,
       "lastAccessed": 1777168447437,
+      "type": "file"
+    },
+    {
+      "path": "vite.config.ts",
+      "accessCount": 2,
+      "lastAccessed": 1777170264034,
       "type": "file"
     },
     {
@@ -320,18 +332,6 @@
       "path": "src/pages/main/index.ts",
       "accessCount": 1,
       "lastAccessed": 1776950176511,
-      "type": "file"
-    },
-    {
-      "path": "package.json",
-      "accessCount": 1,
-      "lastAccessed": 1777119086123,
-      "type": "file"
-    },
-    {
-      "path": "vite.config.ts",
-      "accessCount": 1,
-      "lastAccessed": 1777119086349,
       "type": "file"
     },
     {
