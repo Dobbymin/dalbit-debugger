@@ -1,8 +1,9 @@
 import { Link } from "react-router-dom";
 
-import { BrokenImageIcon, BugReportIcon, HomeIcon, ICON_MOTION, ICON_STYLE, ROUTE_PATHS } from "@/shared";
+import { BrokenImageIcon, BugReportIcon, HomeIcon, ICON_MOTION, ROUTE_PATHS } from "@/shared";
 
-import { css } from "../../../styled-system/css";
+import { css, cx } from "../../../styled-system/css";
+import { icon } from "../../../styled-system/recipes";
 
 export default function NotFound() {
   return (
@@ -36,10 +37,12 @@ export default function NotFound() {
         >
           <div className={css({ display: "flex", justifyContent: "center", mb: "20px" })}>
             <BrokenImageIcon
-              className={css({
-                ...ICON_STYLE.hero,
-                color: "outline",
-              })}
+              className={cx(
+                icon({ usage: "hero" }),
+                css({
+                  color: "outline",
+                }),
+              )}
             />
           </div>
 
@@ -113,7 +116,7 @@ export default function NotFound() {
                 _hover: { bg: "primaryContainer", borderColor: "primaryContainer" },
               })}
             >
-              <HomeIcon className={css(ICON_STYLE.nav)} />
+              <HomeIcon className={icon({ usage: "nav" })} />
               <span>홈으로 돌아가기</span>
             </Link>
 
@@ -140,7 +143,7 @@ export default function NotFound() {
                 _hover: { bg: "surfaceVariant" },
               })}
             >
-              <BugReportIcon className={css(ICON_STYLE.nav)} />
+              <BugReportIcon className={icon({ usage: "nav" })} />
               <span>디버거로 이동</span>
             </Link>
           </div>

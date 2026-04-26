@@ -1,23 +1,11 @@
 import { Link } from "react-router-dom";
 
-import {
-  AccountCircleIcon,
-  HelpCircleIcon,
-  ICON_HOVER_TOKENS,
-  ICON_MOTION,
-  ICON_STYLE,
-  PanelIcon,
-  PlayIcon,
-  SettingsIcon,
-  StepIcon,
-  VariableIcon,
-} from "@/shared";
+import { PanelIcon, PlayIcon, StepIcon, VariableIcon } from "@/shared";
 
 import { css } from "../../../styled-system/css";
+import { icon } from "../../../styled-system/recipes";
 
 export default function MainPage() {
-  const topNavItems = ["라이브러리", "문서"];
-
   const featureCards = [
     {
       Icon: StepIcon,
@@ -57,175 +45,6 @@ export default function MainPage() {
         fontFamily: "body",
       })}
     >
-      <header
-        className={css({
-          position: "sticky",
-          top: 0,
-          zIndex: 10,
-          backdropFilter: "blur(8px)",
-          backgroundColor: "rgba(255, 255, 255, 0.88)",
-          borderBottomWidth: "1px",
-          borderBottomStyle: "solid",
-          borderBottomColor: "outlineVariant",
-        })}
-      >
-        <div
-          className={css({
-            maxWidth: "1200px",
-            marginX: "auto",
-            height: "64px",
-            paddingX: "margin",
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "space-between",
-            gap: "gutter",
-          })}
-        >
-          <div
-            className={css({
-              display: "flex",
-              alignItems: "center",
-              gap: "20px",
-              minWidth: 0,
-            })}
-          >
-            <Link
-              to="/"
-              className={css({
-                fontFamily: "headline",
-                fontWeight: 700,
-                fontSize: "18px",
-                lineHeight: "1.2",
-                letterSpacing: "0.01em",
-                color: "primaryContainer",
-                textDecoration: "none",
-                whiteSpace: "nowrap",
-              })}
-            >
-              Dalbit Debugger
-            </Link>
-
-            <nav
-              className={css({
-                display: { base: "none", md: "flex" },
-                gap: "16px",
-              })}
-            >
-              <Link
-                to="/"
-                className={css({
-                  fontFamily: "code",
-                  fontSize: "13px",
-                  fontWeight: 500,
-                  color: "primary",
-                  borderBottomWidth: "2px",
-                  borderBottomStyle: "solid",
-                  borderBottomColor: "primaryContainer",
-                  paddingBottom: "4px",
-                  textDecoration: "none",
-                })}
-              >
-                Debugger
-              </Link>
-
-              {topNavItems.map((item) => (
-                <button
-                  key={item}
-                  type="button"
-                  className={css({
-                    border: "none",
-                    background: "transparent",
-                    cursor: "pointer",
-                    fontFamily: "code",
-                    fontSize: "13px",
-                    fontWeight: 500,
-                    color: "onSurfaceVariant",
-                    paddingBottom: "4px",
-                    transition: "color 180ms ease",
-                    _hover: { color: "primaryContainer" },
-                  })}
-                >
-                  {item}
-                </button>
-              ))}
-            </nav>
-          </div>
-
-          <div
-            className={css({
-              display: "flex",
-              alignItems: "center",
-              gap: "10px",
-            })}
-          >
-            <Link
-              to="/debugger"
-              className={css({
-                display: { base: "none", sm: "inline-flex" },
-                alignItems: "center",
-                justifyContent: "center",
-                paddingX: "14px",
-                paddingY: "8px",
-                borderRadius: "DEFAULT",
-                backgroundColor: "primaryContainer",
-                color: "onPrimary",
-                textDecoration: "none",
-                fontFamily: "code",
-                fontSize: "12px",
-                fontWeight: 500,
-                letterSpacing: "0.05em",
-                textTransform: "uppercase",
-                transition: "background-color 180ms ease",
-                _hover: { backgroundColor: "primary" },
-              })}
-            >
-              Start
-            </Link>
-
-            <div
-              aria-label="quick actions"
-              className={css({
-                display: "flex",
-                alignItems: "center",
-                gap: "6px",
-              })}
-            >
-              {[
-                { label: "설정", Icon: SettingsIcon },
-                { label: "도움말", Icon: HelpCircleIcon },
-                { label: "계정", Icon: AccountCircleIcon },
-              ].map((action) => (
-                <button
-                  key={action.label}
-                  type="button"
-                  aria-label={action.label}
-                  className={css({
-                    width: "30px",
-                    height: "30px",
-                    borderRadius: "full",
-                    borderWidth: "1px",
-                    borderStyle: "solid",
-                    borderColor: "outlineVariant",
-                    backgroundColor: "surfaceContainerLowest",
-                    color: "onSurfaceVariant",
-                    cursor: "pointer",
-                    fontFamily: "code",
-                    fontSize: "13px",
-                    transition: ICON_MOTION.transition.interactive,
-                    _hover: {
-                      ...ICON_HOVER_TOKENS.ghost,
-                      borderColor: "primaryContainer",
-                    },
-                  })}
-                >
-                  <action.Icon className={css(ICON_STYLE.action)} />
-                </button>
-              ))}
-            </div>
-          </div>
-        </div>
-      </header>
-
       <main
         className={css({
           maxWidth: "1200px",
@@ -312,7 +131,7 @@ export default function MainPage() {
                 alignItems: "center",
                 justifyContent: "center",
                 gap: "8px",
-                minWidth: "190px",
+                minWidth: "200px",
                 paddingX: "18px",
                 paddingY: "14px",
                 borderRadius: "lg",
@@ -329,7 +148,7 @@ export default function MainPage() {
                 },
               })}
             >
-              <PlayIcon className={css(ICON_STYLE.cta)} />
+              <PlayIcon className={icon({ usage: "cta" })} />
               <span>디버깅 시작하기</span>
             </Link>
 
@@ -399,7 +218,7 @@ export default function MainPage() {
                   fontWeight: 600,
                 })}
               >
-                <feature.Icon className={css(ICON_STYLE.feature)} />
+                <feature.Icon className={icon({ usage: "feature" })} />
               </div>
               <h2
                 className={css({

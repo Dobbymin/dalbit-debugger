@@ -173,6 +173,30 @@
       "type": "file"
     },
     {
+      "path": "src/pages/examples/ExamplesPage.tsx",
+      "accessCount": 16,
+      "lastAccessed": 1777137503510,
+      "type": "file"
+    },
+    {
+      "path": "",
+      "accessCount": 16,
+      "lastAccessed": 1777168921131,
+      "type": "directory"
+    },
+    {
+      "path": "src/pages/debugger/DebuggerPage.tsx",
+      "accessCount": 15,
+      "lastAccessed": 1777137453509,
+      "type": "file"
+    },
+    {
+      "path": "src/widgets/layouts/components/Header.tsx",
+      "accessCount": 15,
+      "lastAccessed": 1777169400853,
+      "type": "file"
+    },
+    {
       "path": "docs/rule/fsd-rule.md",
       "accessCount": 13,
       "lastAccessed": 1776950850407,
@@ -185,27 +209,39 @@
       "type": "file"
     },
     {
-      "path": "",
-      "accessCount": 8,
-      "lastAccessed": 1777124334361,
-      "type": "directory"
+      "path": "src/pages/main/MainPage.tsx",
+      "accessCount": 12,
+      "lastAccessed": 1777168533638,
+      "type": "file"
     },
     {
-      "path": ".claude/skills/agent-collaboration-record/SKILL.md",
-      "accessCount": 4,
-      "lastAccessed": 1777124357061,
+      "path": "src/widgets/layouts/ui/RootLayout.tsx",
+      "accessCount": 11,
+      "lastAccessed": 1777168302613,
       "type": "file"
     },
     {
       "path": ".claude/settings.local.json",
-      "accessCount": 4,
-      "lastAccessed": 1777124361033,
+      "accessCount": 6,
+      "lastAccessed": 1777126730426,
       "type": "file"
     },
     {
-      "path": "src/pages/main/MainPage.tsx",
-      "accessCount": 3,
-      "lastAccessed": 1776949431451,
+      "path": ".claude/skills/agent-collaboration-record/SKILL.md",
+      "accessCount": 5,
+      "lastAccessed": 1777126677084,
+      "type": "file"
+    },
+    {
+      "path": "src/widgets/layouts/components/Sidebar.tsx",
+      "accessCount": 5,
+      "lastAccessed": 1777166431302,
+      "type": "file"
+    },
+    {
+      "path": "src/app/routes/Routes.tsx",
+      "accessCount": 4,
+      "lastAccessed": 1777139157532,
       "type": "file"
     },
     {
@@ -233,27 +269,39 @@
       "type": "file"
     },
     {
-      "path": "src/app/routes/Routes.tsx",
-      "accessCount": 2,
-      "lastAccessed": 1776948958492,
-      "type": "file"
-    },
-    {
-      "path": "src/pages/examples/ExamplesPage.tsx",
-      "accessCount": 2,
-      "lastAccessed": 1776949432045,
-      "type": "file"
-    },
-    {
-      "path": "src/pages/debugger/DebuggerPage.tsx",
-      "accessCount": 2,
-      "lastAccessed": 1776949432148,
+      "path": "src/widgets/layouts/index.ts",
+      "accessCount": 3,
+      "lastAccessed": 1777168285601,
       "type": "file"
     },
     {
       "path": "src/shared/index.ts",
       "accessCount": 2,
       "lastAccessed": 1777119522406,
+      "type": "file"
+    },
+    {
+      "path": "src/shared/constants/route-path.ts",
+      "accessCount": 2,
+      "lastAccessed": 1777139157887,
+      "type": "file"
+    },
+    {
+      "path": "src/widgets/layouts/ui/PageLayout.tsx",
+      "accessCount": 2,
+      "lastAccessed": 1777139161469,
+      "type": "file"
+    },
+    {
+      "path": "src/shared/constants/icon-style.ts",
+      "accessCount": 2,
+      "lastAccessed": 1777139199270,
+      "type": "file"
+    },
+    {
+      "path": "panda.config.ts",
+      "accessCount": 2,
+      "lastAccessed": 1777168447437,
       "type": "file"
     },
     {
@@ -269,27 +317,9 @@
       "type": "file"
     },
     {
-      "path": "src/shared/constants/route-path.ts",
-      "accessCount": 1,
-      "lastAccessed": 1776947618583,
-      "type": "file"
-    },
-    {
-      "path": "src/widgets/layouts/ui/RootLayout.tsx",
-      "accessCount": 1,
-      "lastAccessed": 1776949432288,
-      "type": "file"
-    },
-    {
       "path": "src/pages/main/index.ts",
       "accessCount": 1,
       "lastAccessed": 1776950176511,
-      "type": "file"
-    },
-    {
-      "path": "panda.config.ts",
-      "accessCount": 1,
-      "lastAccessed": 1777119085767,
       "type": "file"
     },
     {
@@ -333,6 +363,108 @@
       "accessCount": 1,
       "lastAccessed": 1777123632994,
       "type": "directory"
+    },
+    {
+      "path": "src/pages/not-found/NotFound.tsx",
+      "accessCount": 1,
+      "lastAccessed": 1777125621413,
+      "type": "file"
+    },
+    {
+      "path": "src/pages",
+      "accessCount": 1,
+      "lastAccessed": 1777126538944,
+      "type": "directory"
+    },
+    {
+      "path": "src/widgets/layouts",
+      "accessCount": 1,
+      "lastAccessed": 1777126545486,
+      "type": "directory"
+    },
+    {
+      "path": "docs/log/agents/01-header-컴포넌트-분리-및-stop-hook-수정.md",
+      "accessCount": 1,
+      "lastAccessed": 1777126793834,
+      "type": "file"
+    },
+    {
+      "path": "docs/log/agents/02-header-중복-렌더링-제거.md",
+      "accessCount": 1,
+      "lastAccessed": 1777127803239,
+      "type": "file"
+    },
+    {
+      "path": "src/shared",
+      "accessCount": 1,
+      "lastAccessed": 1777128625995,
+      "type": "directory"
+    },
+    {
+      "path": "docs/log/agents/04-sidebar-공용-컴포넌트-분리.md",
+      "accessCount": 1,
+      "lastAccessed": 1777137542755,
+      "type": "file"
+    },
+    {
+      "path": "docs/log/agents/05-header-sidebar-네비게이션-수정.md",
+      "accessCount": 1,
+      "lastAccessed": 1777139372787,
+      "type": "file"
+    },
+    {
+      "path": "docs/log/agents/06-header-아이콘-제거-및-activetab-기본값-수정.md",
+      "accessCount": 1,
+      "lastAccessed": 1777166031782,
+      "type": "file"
+    },
+    {
+      "path": "docs/log/agents/07-header-검색바-제거-및-sidebar-레이블-수정.md",
+      "accessCount": 1,
+      "lastAccessed": 1777166463291,
+      "type": "file"
+    },
+    {
+      "path": "src/index.css",
+      "accessCount": 1,
+      "lastAccessed": 1777166516014,
+      "type": "file"
+    },
+    {
+      "path": "src/widgets/layouts/types.ts",
+      "accessCount": 1,
+      "lastAccessed": 1777168292461,
+      "type": "file"
+    },
+    {
+      "path": "src",
+      "accessCount": 1,
+      "lastAccessed": 1777168443009,
+      "type": "directory"
+    },
+    {
+      "path": "src/widgets/layouts/types/active-tab.types.ts",
+      "accessCount": 1,
+      "lastAccessed": 1777168447776,
+      "type": "file"
+    },
+    {
+      "path": "docs/log/agents/08-debuggerpage-전체화면-레이아웃-수정.md",
+      "accessCount": 1,
+      "lastAccessed": 1777168722187,
+      "type": "file"
+    },
+    {
+      "path": "docs/log/agents/09-activetab-타입-중복-제거-및-playicon-레시피-적용.md",
+      "accessCount": 1,
+      "lastAccessed": 1777168734671,
+      "type": "file"
+    },
+    {
+      "path": "src/shared/_assets/icon/debugger.svg",
+      "accessCount": 1,
+      "lastAccessed": 1777168926020,
+      "type": "file"
     }
   ],
   "userDirectives": []

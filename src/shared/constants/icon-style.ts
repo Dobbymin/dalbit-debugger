@@ -1,17 +1,19 @@
+import { icon } from "../../../styled-system/recipes";
+
 export const ICON_SIZE = {
-  xs: "11px",
-  sm: "12px",
-  md: "14px",
-  lg: "16px",
-  xl: "18px",
-  card: "24px",
+  xs: "12px",
+  sm: "14px",
+  md: "16px",
+  lg: "20px",
+  xl: "24px",
+  card: "32px",
   hero: "80px",
 } as const;
 
 export const ICON_WEIGHT = {
   regular: { transform: "scale(1)" },
-  medium: { transform: "scale(1.03)" },
-  boldFeel: { transform: "scale(1.08)" },
+  medium: { transform: "scale(1.01)" },
+  boldFeel: { transform: "scale(1.03)" },
 } as const;
 
 export const ICON_MOTION = {
@@ -43,46 +45,11 @@ export const ICON_HOVER_TOKENS = {
 } as const;
 
 export const ICON_STYLE = {
-  action: {
-    width: ICON_SIZE.md,
-    height: ICON_SIZE.md,
-    ...ICON_WEIGHT.medium,
-    transition: ICON_MOTION.transition.iconTransform,
-  },
-  nav: {
-    width: ICON_SIZE.md,
-    height: ICON_SIZE.md,
-    ...ICON_WEIGHT.regular,
-    transition: ICON_MOTION.transition.iconTransform,
-  },
-  control: {
-    width: ICON_SIZE.sm,
-    height: ICON_SIZE.sm,
-    ...ICON_WEIGHT.boldFeel,
-    transition: ICON_MOTION.transition.iconTransform,
-  },
-  feature: {
-    width: ICON_SIZE.card,
-    height: ICON_SIZE.card,
-    ...ICON_WEIGHT.medium,
-    transition: ICON_MOTION.transition.iconTransform,
-  },
-  cta: {
-    width: ICON_SIZE.xl,
-    height: ICON_SIZE.xl,
-    ...ICON_WEIGHT.medium,
-    transition: ICON_MOTION.transition.iconTransform,
-  },
-  inline: {
-    width: ICON_SIZE.xs,
-    height: ICON_SIZE.xs,
-    ...ICON_WEIGHT.medium,
-    transition: ICON_MOTION.transition.iconTransform,
-  },
-  hero: {
-    width: ICON_SIZE.hero,
-    height: ICON_SIZE.hero,
-    ...ICON_WEIGHT.regular,
-    transition: ICON_MOTION.transition.iconTransform,
-  },
+  action: icon.raw({ usage: "action" }),
+  nav: icon.raw({ usage: "nav" }),
+  control: icon.raw({ usage: "control" }),
+  feature: icon.raw({ usage: "feature" }),
+  cta: icon.raw({ usage: "cta" }),
+  inline: icon.raw({ usage: "inline" }),
+  hero: icon.raw({ usage: "hero" }),
 } as const;

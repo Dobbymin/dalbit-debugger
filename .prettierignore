@@ -7,12 +7,13 @@ public
 
 # 환경설정 파일 무시
 *.lock
-# *.config.js
-# *.config.ts
-# *.config.mjs
+*.config.js
+*.config.ts
+*.config.mjs
 *.md
 package-lock.json
 
 .omc
 test-results
 playwright-report
+docs/log/stitch

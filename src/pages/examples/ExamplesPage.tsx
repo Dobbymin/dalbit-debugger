@@ -1,29 +1,9 @@
-import {
-  AccountCircleIcon,
-  CodeIcon,
-  DebuggerIcon,
-  HelpCircleIcon,
-  HomeIcon,
-  ICON_HOVER_TOKENS,
-  ICON_MOTION,
-  ICON_STYLE,
-  PlayIcon,
-  SearchIcon,
-  SettingsIcon,
-} from "@/shared";
+import { CodeIcon, PlayIcon } from "@/shared";
 
 import { css } from "../../../styled-system/css";
+import { icon } from "../../../styled-system/recipes";
 
 export default function ExamplesPage() {
-  const headerTabs = ["Debugger", "Library", "Documentation"] as const;
-
-  const menuItems = [
-    { label: "Home", Icon: HomeIcon, active: false },
-    { label: "Debugger", Icon: DebuggerIcon, active: false },
-    { label: "Snippets", Icon: CodeIcon, active: true },
-    { label: "Settings", Icon: SettingsIcon, active: false },
-  ] as const;
-
   const sections = [
     {
       title: "변수와 조건문",
@@ -76,534 +56,260 @@ export default function ExamplesPage() {
   ] as const;
 
   return (
-    <div
+    <main
       className={css({
-        minHeight: "100dvh",
+        flex: 1,
+        overflowY: "auto",
         backgroundColor: "#f7f9ff",
         color: "#1d2a3a",
         fontFamily: "body",
+        padding: { base: "14px", md: "24px" },
       })}
     >
-      <header
-        className={css({
-          height: "64px",
-          borderBottomWidth: "1px",
-          borderBottomStyle: "solid",
-          borderBottomColor: "#dbe4f0",
-          backgroundColor: "#ffffff",
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "space-between",
-          paddingX: { base: "12px", md: "24px" },
-          gap: "16px",
-        })}
-      >
-        <div
-          className={css({
-            display: "flex",
-            alignItems: "center",
-            gap: { base: "14px", md: "24px" },
-            minWidth: 0,
-          })}
-        >
-          <div
-            className={css({
-              color: "#1e4b91",
-              fontFamily: "headline",
-              fontSize: "18px",
-              fontWeight: 800,
-              whiteSpace: "nowrap",
-            })}
-          >
-            Dalbit Debugger
-          </div>
-
-          <nav
-            className={css({
-              display: { base: "none", md: "flex" },
-              alignItems: "center",
-              gap: "20px",
-            })}
-          >
-            {headerTabs.map((tab) => (
-              <button
-                key={tab}
-                type="button"
-                className={css({
-                  border: "none",
-                  background: "transparent",
-                  fontSize: "12px",
-                  fontFamily: "code",
-                  color: tab === "Library" ? "#1e4b91" : "#6a778a",
-                  borderBottomWidth: tab === "Library" ? "2px" : "0",
-                  borderBottomStyle: "solid",
-                  borderBottomColor: "#1e4b91",
-                  paddingBottom: "4px",
-                  cursor: "pointer",
-                })}
-              >
-                {tab}
-              </button>
-            ))}
-          </nav>
-        </div>
-
-        <div
-          className={css({
-            display: "flex",
-            alignItems: "center",
-            gap: "10px",
-            minWidth: 0,
-          })}
-        >
-          <div
-            className={css({
-              display: { base: "none", lg: "flex" },
-              alignItems: "center",
-              gap: "6px",
-              height: "34px",
-              width: "220px",
-              borderWidth: "1px",
-              borderStyle: "solid",
-              borderColor: "#d3dbe7",
-              borderRadius: "DEFAULT",
-              paddingX: "10px",
-              backgroundColor: "#f8fbff",
-              color: "#6f7a8b",
-              fontFamily: "code",
-              fontSize: "12px",
-            })}
-          >
-            <SearchIcon className={css(ICON_STYLE.action)} />
-            <span>Search examples...</span>
-          </div>
-
-          {[
-            { label: "settings", Icon: SettingsIcon },
-            { label: "help", Icon: HelpCircleIcon },
-            { label: "account", Icon: AccountCircleIcon },
-          ].map((item) => (
-            <button
-              key={item.label}
-              type="button"
-              aria-label={item.label}
-              className={css({
-                width: "30px",
-                height: "30px",
-                border: "none",
-                borderRadius: "DEFAULT",
-                backgroundColor: "transparent",
-                color: "#657389",
-                cursor: "pointer",
-                transition: ICON_MOTION.transition.interactive,
-                _hover: ICON_HOVER_TOKENS.ghost,
-              })}
-            >
-              <item.Icon className={css(ICON_STYLE.action)} />
-            </button>
-          ))}
-
-          <button
-            type="button"
-            className={css({
-              height: "30px",
-              border: "none",
-              borderRadius: "DEFAULT",
-              backgroundColor: "#1e4b91",
-              color: "#fff",
-              fontFamily: "code",
-              fontSize: "11px",
-              paddingX: "10px",
-              cursor: "pointer",
-              whiteSpace: "nowrap",
-              _hover: { opacity: 0.92 },
-            })}
-          >
-            Start Debugging
-          </button>
-        </div>
-      </header>
-
       <div
         className={css({
-          display: "flex",
-          minHeight: "calc(100dvh - 64px)",
+          maxWidth: "1120px",
+          marginX: "auto",
         })}
       >
-        <aside
+        <header
           className={css({
-            display: { base: "none", md: "flex" },
-            width: "256px",
-            borderRightWidth: "1px",
-            borderRightStyle: "solid",
-            borderRightColor: "#dbe4f0",
-            backgroundColor: "#f6f6f7",
-            padding: "16px",
-            flexDirection: "column",
-            gap: "10px",
+            marginBottom: "18px",
           })}
         >
-          <div
+          <h1
             className={css({
-              display: "flex",
-              alignItems: "center",
-              gap: "10px",
-              marginBottom: "8px",
+              margin: 0,
+              fontFamily: "headline",
+              fontSize: { base: "28px", md: "34px" },
+              lineHeight: "1.2",
+              color: "#17293f",
             })}
           >
-            <div
-              className={css({
-                width: "28px",
-                height: "28px",
-                borderRadius: "DEFAULT",
-                backgroundColor: "#1e4b91",
-                color: "#fff",
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                fontSize: "14px",
-                fontWeight: 700,
-              })}
-            >
-              D
-            </div>
-            <div>
-              <p
-                className={css({
-                  margin: 0,
-                  color: "#1e4b91",
-                  fontFamily: "headline",
-                  fontSize: "18px",
-                  fontWeight: 800,
-                })}
-              >
-                Dalbit
-              </p>
-              <p
-                className={css({
-                  margin: 0,
-                  marginTop: "-2px",
-                  fontSize: "10px",
-                  color: "#76829a",
-                  letterSpacing: "0.08em",
-                  textTransform: "uppercase",
-                  fontFamily: "code",
-                })}
-              >
-                Step Debugger
-              </p>
-            </div>
-          </div>
+            Example Library
+          </h1>
+          <p
+            className={css({
+              margin: 0,
+              marginTop: "6px",
+              color: "#64748b",
+              fontSize: "14px",
+            })}
+          >
+            Explore categorized Python snippets to practice stepping through code.
+          </p>
+        </header>
 
-          <button
-            type="button"
-            className={css({
-              border: "none",
-              borderRadius: "DEFAULT",
-              height: "36px",
-              backgroundColor: "#1e4b91",
-              color: "#fff",
-              fontFamily: "code",
-              fontSize: "12px",
-              cursor: "pointer",
-              marginBottom: "6px",
-              _hover: { opacity: 0.92 },
-            })}
-          >
-            + New Session
-          </button>
-
-          <nav
-            className={css({
-              display: "flex",
-              flexDirection: "column",
-              gap: "4px",
-            })}
-          >
-            {menuItems.map((item) => (
-              <button
-                key={item.label}
-                type="button"
+        <div
+          className={css({
+            display: "flex",
+            flexDirection: "column",
+            gap: "20px",
+          })}
+        >
+          {sections.map((section) => (
+            <section key={section.title}>
+              <div
                 className={css({
-                  height: "38px",
                   display: "flex",
                   alignItems: "center",
-                  gap: "10px",
-                  paddingX: "10px",
-                  borderRadius: "lg",
-                  border: item.active ? "1px solid #d8e1ef" : "1px solid transparent",
-                  backgroundColor: item.active ? "#ffffff" : "transparent",
-                  color: item.active ? "#1e4b91" : "#5d6b81",
-                  fontFamily: "code",
-                  fontSize: "12px",
-                  textAlign: "left",
-                  cursor: "pointer",
-                  transition: ICON_MOTION.transition.interactive,
-                  _hover: {
-                    backgroundColor: item.active ? "#ffffff" : "#eaf0fa",
+                  justifyContent: "space-between",
+                  paddingBottom: "8px",
+                  marginBottom: "12px",
+                  borderBottomWidth: "1px",
+                  borderBottomStyle: "solid",
+                  borderBottomColor: "#d7dfec",
+                })}
+              >
+                <h2
+                  className={css({
+                    margin: 0,
+                    color: "#1e4b91",
+                    fontFamily: "headline",
+                    fontSize: { base: "20px", md: "24px" },
+                    display: "flex",
+                    alignItems: "center",
+                    gap: "8px",
+                  })}
+                >
+                  <CodeIcon className={icon({ usage: "action" })} />
+                  {section.title}
+                </h2>
+                <span
+                  className={css({
+                    fontFamily: "code",
+                    fontSize: "11px",
+                    color: "#738199",
+                    backgroundColor: "#e8f0fd",
+                    borderRadius: "DEFAULT",
+                    paddingX: "8px",
+                    paddingY: "4px",
+                  })}
+                >
+                  {section.count} Examples
+                </span>
+              </div>
+
+              <div
+                className={css({
+                  display: "grid",
+                  gridTemplateColumns: {
+                    base: "1fr",
+                    md: "repeat(2, minmax(0, 1fr))",
+                    xl: "repeat(3, minmax(0, 1fr))",
                   },
+                  gap: "12px",
                 })}
               >
-                <item.Icon className={css(ICON_STYLE.nav)} />
-                <span>{item.label}</span>
-              </button>
-            ))}
-          </nav>
-        </aside>
-
-        <main
-          className={css({
-            flex: 1,
-            overflowY: "auto",
-            padding: { base: "14px", md: "24px" },
-          })}
-        >
-          <div
-            className={css({
-              maxWidth: "1120px",
-              marginX: "auto",
-            })}
-          >
-            <header
-              className={css({
-                marginBottom: "18px",
-              })}
-            >
-              <h1
-                className={css({
-                  margin: 0,
-                  fontFamily: "headline",
-                  fontSize: { base: "28px", md: "34px" },
-                  lineHeight: "1.2",
-                  color: "#17293f",
-                })}
-              >
-                Example Library
-              </h1>
-              <p
-                className={css({
-                  margin: 0,
-                  marginTop: "6px",
-                  color: "#64748b",
-                  fontSize: "14px",
-                })}
-              >
-                Explore categorized Python snippets to practice stepping through code.
-              </p>
-            </header>
-
-            <div
-              className={css({
-                display: "flex",
-                flexDirection: "column",
-                gap: "20px",
-              })}
-            >
-              {sections.map((section) => (
-                <section key={section.title}>
-                  <div
+                {section.cards.map((card) => (
+                  <article
+                    key={card.title}
                     className={css({
+                      minHeight: "250px",
                       display: "flex",
-                      alignItems: "center",
-                      justifyContent: "space-between",
-                      paddingBottom: "8px",
-                      marginBottom: "12px",
-                      borderBottomWidth: "1px",
-                      borderBottomStyle: "solid",
-                      borderBottomColor: "#d7dfec",
-                    })}
-                  >
-                    <h2
-                      className={css({
-                        margin: 0,
-                        color: "#1e4b91",
-                        fontFamily: "headline",
-                        fontSize: { base: "20px", md: "24px" },
-                        display: "flex",
-                        alignItems: "center",
-                        gap: "8px",
-                      })}
-                    >
-                      <CodeIcon className={css(ICON_STYLE.action)} />
-                      {section.title}
-                    </h2>
-                    <span
-                      className={css({
-                        fontFamily: "code",
-                        fontSize: "11px",
-                        color: "#738199",
-                        backgroundColor: "#e8f0fd",
-                        borderRadius: "DEFAULT",
-                        paddingX: "8px",
-                        paddingY: "4px",
-                      })}
-                    >
-                      {section.count} Examples
-                    </span>
-                  </div>
-
-                  <div
-                    className={css({
-                      display: "grid",
-                      gridTemplateColumns: {
-                        base: "1fr",
-                        md: "repeat(2, minmax(0, 1fr))",
-                        xl: "repeat(3, minmax(0, 1fr))",
+                      flexDirection: "column",
+                      borderWidth: "1px",
+                      borderStyle: "solid",
+                      borderColor: "#d5ddeb",
+                      borderRadius: "xl",
+                      backgroundColor: "#fff",
+                      padding: "12px",
+                      boxShadow: "0 1px 2px rgba(0,0,0,0.04)",
+                      transition: "border-color 160ms ease",
+                      _hover: {
+                        borderColor: "#1e4b91",
                       },
-                      gap: "12px",
                     })}
                   >
-                    {section.cards.map((card) => (
-                      <article
-                        key={card.title}
+                    <div>
+                      <div
                         className={css({
-                          minHeight: "250px",
                           display: "flex",
-                          flexDirection: "column",
+                          alignItems: "flex-start",
+                          justifyContent: "space-between",
+                          gap: "8px",
+                        })}
+                      >
+                        <h3
+                          className={css({
+                            margin: 0,
+                            fontFamily: "headline",
+                            fontSize: "17px",
+                            lineHeight: "1.3",
+                            color: "#162a43",
+                          })}
+                        >
+                          {card.title}
+                        </h3>
+                        {card.badge ? (
+                          <span
+                            className={css({
+                              borderRadius: "DEFAULT",
+                              paddingX: "6px",
+                              paddingY: "2px",
+                              fontSize: "10px",
+                              fontFamily: "code",
+                              backgroundColor: "#ffdcd7",
+                              color: "#8e1610",
+                              whiteSpace: "nowrap",
+                            })}
+                          >
+                            {card.badge}
+                          </span>
+                        ) : null}
+                      </div>
+
+                      <p
+                        className={css({
+                          margin: 0,
+                          marginTop: "6px",
+                          fontSize: "13px",
+                          color: "#6b778d",
+                          lineHeight: "1.45",
+                        })}
+                      >
+                        {card.description}
+                      </p>
+                    </div>
+
+                    <div
+                      className={css({
+                        marginTop: "10px",
+                        backgroundColor: "#f6f9ff",
+                        borderWidth: "1px",
+                        borderStyle: "solid",
+                        borderColor: "#dce5f5",
+                        borderRadius: "lg",
+                        padding: "10px",
+                        position: "relative",
+                        overflow: "hidden",
+                      })}
+                    >
+                      <div
+                        className={css({
+                          position: "absolute",
+                          left: 0,
+                          top: 0,
+                          bottom: 0,
+                          width: "2px",
+                          backgroundColor: "#1e4b91",
+                        })}
+                      />
+                      <pre
+                        className={css({
+                          margin: 0,
+                          paddingLeft: "8px",
+                          fontFamily: "code",
+                          fontSize: "12px",
+                          color: "#334155",
+                          lineHeight: "1.4",
+                        })}
+                      >
+                        {card.code.join("\n")}
+                      </pre>
+                    </div>
+
+                    <div
+                      className={css({
+                        marginTop: "auto",
+                        paddingTop: "10px",
+                        display: "flex",
+                        justifyContent: "flex-end",
+                      })}
+                    >
+                      <button
+                        type="button"
+                        className={css({
+                          display: "inline-flex",
+                          alignItems: "center",
+                          gap: "6px",
+                          height: "30px",
                           borderWidth: "1px",
                           borderStyle: "solid",
-                          borderColor: "#d5ddeb",
-                          borderRadius: "xl",
+                          borderColor: "#1e4b91",
+                          borderRadius: "DEFAULT",
+                          paddingX: "10px",
                           backgroundColor: "#fff",
-                          padding: "12px",
-                          boxShadow: "0 1px 2px rgba(0,0,0,0.04)",
-                          transition: "border-color 160ms ease",
+                          color: "#1e4b91",
+                          fontFamily: "code",
+                          fontSize: "11px",
+                          cursor: "pointer",
                           _hover: {
-                            borderColor: "#1e4b91",
+                            backgroundColor: "#eef4ff",
                           },
                         })}
                       >
-                        <div>
-                          <div
-                            className={css({
-                              display: "flex",
-                              alignItems: "flex-start",
-                              justifyContent: "space-between",
-                              gap: "8px",
-                            })}
-                          >
-                            <h3
-                              className={css({
-                                margin: 0,
-                                fontFamily: "headline",
-                                fontSize: "17px",
-                                lineHeight: "1.3",
-                                color: "#162a43",
-                              })}
-                            >
-                              {card.title}
-                            </h3>
-                            {card.badge ? (
-                              <span
-                                className={css({
-                                  borderRadius: "DEFAULT",
-                                  paddingX: "6px",
-                                  paddingY: "2px",
-                                  fontSize: "10px",
-                                  fontFamily: "code",
-                                  backgroundColor: "#ffdcd7",
-                                  color: "#8e1610",
-                                  whiteSpace: "nowrap",
-                                })}
-                              >
-                                {card.badge}
-                              </span>
-                            ) : null}
-                          </div>
-
-                          <p
-                            className={css({
-                              margin: 0,
-                              marginTop: "6px",
-                              fontSize: "13px",
-                              color: "#6b778d",
-                              lineHeight: "1.45",
-                            })}
-                          >
-                            {card.description}
-                          </p>
-                        </div>
-
-                        <div
-                          className={css({
-                            marginTop: "10px",
-                            backgroundColor: "#f6f9ff",
-                            borderWidth: "1px",
-                            borderStyle: "solid",
-                            borderColor: "#dce5f5",
-                            borderRadius: "lg",
-                            padding: "10px",
-                            position: "relative",
-                            overflow: "hidden",
-                          })}
-                        >
-                          <div
-                            className={css({
-                              position: "absolute",
-                              left: 0,
-                              top: 0,
-                              bottom: 0,
-                              width: "2px",
-                              backgroundColor: "#1e4b91",
-                            })}
-                          />
-                          <pre
-                            className={css({
-                              margin: 0,
-                              paddingLeft: "8px",
-                              fontFamily: "code",
-                              fontSize: "12px",
-                              color: "#334155",
-                              lineHeight: "1.4",
-                            })}
-                          >
-                            {card.code.join("\n")}
-                          </pre>
-                        </div>
-
-                        <div
-                          className={css({
-                            marginTop: "auto",
-                            paddingTop: "10px",
-                            display: "flex",
-                            justifyContent: "flex-end",
-                          })}
-                        >
-                          <button
-                            type="button"
-                            className={css({
-                              display: "inline-flex",
-                              alignItems: "center",
-                              gap: "6px",
-                              height: "30px",
-                              borderWidth: "1px",
-                              borderStyle: "solid",
-                              borderColor: "#1e4b91",
-                              borderRadius: "DEFAULT",
-                              paddingX: "10px",
-                              backgroundColor: "#fff",
-                              color: "#1e4b91",
-                              fontFamily: "code",
-                              fontSize: "11px",
-                              cursor: "pointer",
-                              _hover: {
-                                backgroundColor: "#eef4ff",
-                              },
-                            })}
-                          >
-                            <PlayIcon className={css(ICON_STYLE.inline)} />
-                            <span>디버거에서 열기</span>
-                          </button>
-                        </div>
-                      </article>
-                    ))}
-                  </div>
-                </section>
-              ))}
-            </div>
-          </div>
-        </main>
+                        <PlayIcon className={icon({ usage: "inline" })} />
+                        <span>디버거에서 열기</span>
+                      </button>
+                    </div>
+                  </article>
+                ))}
+              </div>
+            </section>
+          ))}
+        </div>
       </div>
-    </div>
+    </main>
   );
 }
