@@ -1,8 +1,9 @@
 import { Link } from "react-router-dom";
 
-import { ICON_STYLE, PanelIcon, PlayIcon, StepIcon, VariableIcon } from "@/shared";
+import { PanelIcon, PlayIcon, StepIcon, VariableIcon } from "@/shared";
 
 import { css } from "../../../styled-system/css";
+import { icon } from "../../../styled-system/recipes";
 
 export default function MainPage() {
   const featureCards = [
@@ -130,7 +131,7 @@ export default function MainPage() {
                 alignItems: "center",
                 justifyContent: "center",
                 gap: "8px",
-                minWidth: "190px",
+                minWidth: "200px",
                 paddingX: "18px",
                 paddingY: "14px",
                 borderRadius: "lg",
@@ -147,7 +148,13 @@ export default function MainPage() {
                 },
               })}
             >
-              <PlayIcon className={css(ICON_STYLE.cta)} />
+              <PlayIcon
+                className={css({
+                  w: "30px",
+                  h: "30px",
+                  flexShrink: 0,
+                })}
+              />
               <span>디버깅 시작하기</span>
             </Link>
 
@@ -217,7 +224,7 @@ export default function MainPage() {
                   fontWeight: 600,
                 })}
               >
-                <feature.Icon className={css(ICON_STYLE.feature)} />
+                <feature.Icon className={icon({ usage: "feature" })} />
               </div>
               <h2
                 className={css({
