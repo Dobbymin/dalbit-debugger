@@ -1,9 +1,13 @@
-import { QueryProvider } from "./components";
+import { ErrorBoundary, QueryProvider } from "./components";
 
 type Props = {
   children: React.ReactNode;
 };
 
 export const ApplicationProvider = ({ children }: Props) => {
-  return <QueryProvider>{children}</QueryProvider>;
+  return (
+    <ErrorBoundary>
+      <QueryProvider>{children}</QueryProvider>
+    </ErrorBoundary>
+  );
 };

@@ -4,7 +4,7 @@ export const ROUTE_PATHS = {
   MAIN: "/",
   DEBUGGER: "/debugger",
   EXAMPLES: "/examples",
-
+  ERROR: "/error",
   NOT_FOUND: "*",
 };
 
