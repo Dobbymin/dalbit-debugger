@@ -22,13 +22,13 @@ RUN pnpm prepare-panda
 RUN pnpm build
 
 # Production stage
-# FROM nginx:alpine
+FROM nginx:alpine
 
 # Copy built files from build stage
-# COPY --from=build /app/dist /usr/share/nginx/html
+COPY --from=build /app/dist /usr/share/nginx/html
 
 # Copy custom nginx config if needed (optional)
-# COPY nginx.conf /etc/nginx/conf.d/default.conf
+COPY nginx.conf /etc/nginx/conf.d/dalbit.conf
 
 EXPOSE 80
 

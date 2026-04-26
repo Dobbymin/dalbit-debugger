@@ -4,4 +4,4 @@ services:
     container_name: dalbit-debugger
     restart: unless-stopped
     ports:
-      - "5174:5174"
+      - "5174:80"
