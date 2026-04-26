@@ -1,0 +1,57 @@
+- generic [ref=e2]:
+  - generic [ref=e3]:
+    - banner [ref=e4]:
+      - link "Dalbit Debugger logo Dalbit Debugger" [ref=e6] [cursor=pointer]:
+        - /url: /
+        - img "Dalbit Debugger logo" [ref=e7]
+        - generic [ref=e8]: Dalbit Debugger
+    - generic [ref=e11]:
+      - main [ref=e12]:
+        - generic [ref=e13]:
+          - generic [ref=e14]:
+            - button "단계 실행" [ref=e15] [cursor=pointer]:
+              - img [ref=e16]
+              - generic [ref=e18]: 단계 실행
+            - button "자동 실행" [ref=e19] [cursor=pointer]:
+              - img [ref=e20]
+              - generic [ref=e22]: 자동 실행
+            - button "전체 실행" [ref=e23] [cursor=pointer]:
+              - img [ref=e24]
+              - generic [ref=e26]: 전체 실행
+            - button "일시정지" [disabled] [ref=e27]:
+              - img [ref=e28]
+              - generic [ref=e30]: 일시정지
+            - button "재개" [disabled] [ref=e31]:
+              - img [ref=e32]
+              - generic [ref=e34]: 재개
+            - button "정지" [disabled] [ref=e35]:
+              - img [ref=e36]
+              - generic [ref=e38]: 정지
+            - generic [ref=e39]:
+              - generic [ref=e40]: 실행 속도
+              - slider "실행 속도" [ref=e41]: "5"
+          - generic [ref=e42]: "상태: IDLE"
+        - generic [ref=e43]:
+          - generic [ref=e49]: Loading...
+          - complementary [ref=e50]:
+            - generic [ref=e51]:
+              - heading "Variables (Scope)" [level=3] [ref=e52]
+              - img [ref=e53]
+            - generic [ref=e56]: 활성 변수 없음
+        - generic [ref=e57]:
+          - generic [ref=e58]:
+            - generic [ref=e59]: 출력 로그
+            - button [ref=e60] [cursor=pointer]:
+              - img [ref=e61]
+          - generic [ref=e64]: 로그가 없습니다.
+      - contentinfo [ref=e65]:
+        - generic [ref=e66]: © 2026 Dalbit Debugger. Education through Architecture.
+        - generic [ref=e67]:
+          - generic [ref=e68]: Documentation
+          - generic [ref=e69]: Privacy Policy
+          - generic [ref=e70]: Open Source
+          - generic [ref=e71]: Support
+  - generic [ref=e72]:
+    - img [ref=e74]
+    - button "Open Tanstack query devtools" [ref=e122] [cursor=pointer]:
+      - img [ref=e123]

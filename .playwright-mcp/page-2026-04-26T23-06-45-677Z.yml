@@ -1,0 +1,64 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - generic [ref=e3]:
+      - banner [ref=e4]:
+        - link "Dalbit Debugger logo Dalbit Debugger" [ref=e6] [cursor=pointer]:
+          - /url: /
+          - img "Dalbit Debugger logo" [ref=e7]
+          - generic [ref=e8]: Dalbit Debugger
+      - generic [ref=e11]:
+        - main [ref=e12]:
+          - generic [ref=e13]:
+            - generic [ref=e14]:
+              - button "단계 실행" [ref=e15] [cursor=pointer]:
+                - img [ref=e16]
+                - generic [ref=e18]: 단계 실행
+              - button "자동 실행" [ref=e19] [cursor=pointer]:
+                - img [ref=e20]
+                - generic [ref=e22]: 자동 실행
+              - button "전체 실행" [ref=e23] [cursor=pointer]:
+                - img [ref=e24]
+                - generic [ref=e26]: 전체 실행
+              - button "일시정지" [disabled] [ref=e27]:
+                - img [ref=e28]
+                - generic [ref=e30]: 일시정지
+              - button "재개" [disabled] [ref=e31]:
+                - img [ref=e32]
+                - generic [ref=e34]: 재개
+              - button "정지" [disabled] [ref=e35]:
+                - img [ref=e36]
+                - generic [ref=e38]: 정지
+              - generic [ref=e39]:
+                - generic [ref=e40]: 실행 속도
+                - slider "실행 속도" [ref=e41]: "5"
+            - generic [ref=e42]: "상태: IDLE"
+          - generic [ref=e43]:
+            - code [ref=e50]:
+              - generic [ref=e51]:
+                - textbox "Editor content"
+                - textbox [ref=e52]
+            - complementary [ref=e55]:
+              - generic [ref=e56]:
+                - heading "Variables (Scope)" [level=3] [ref=e57]
+                - img [ref=e58]
+              - generic [ref=e61]: 활성 변수 없음
+          - generic [ref=e62]:
+            - generic [ref=e63]:
+              - generic [ref=e64]: 출력 로그
+              - button [ref=e65] [cursor=pointer]:
+                - img [ref=e66]
+            - generic [ref=e69]: 로그가 없습니다.
+        - contentinfo [ref=e70]:
+          - generic [ref=e71]: © 2026 Dalbit Debugger. Education through Architecture.
+          - generic [ref=e72]:
+            - generic [ref=e73]: Documentation
+            - generic [ref=e74]: Privacy Policy
+            - generic [ref=e75]: Open Source
+            - generic [ref=e76]: Support
+    - generic [ref=e77]:
+      - img [ref=e79]
+      - button "Open Tanstack query devtools" [ref=e127] [cursor=pointer]:
+        - img [ref=e128]
+  - generic [ref=e176]:
+    - alert
+    - alert

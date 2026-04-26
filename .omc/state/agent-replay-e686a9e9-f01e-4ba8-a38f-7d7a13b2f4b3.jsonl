@@ -1,0 +1,3 @@
+{"t":0,"agent":"system","event":"skill_invoked","skill_name":"ecc:design-system"}
+{"t":0,"agent":"system","event":"skill_invoked","skill_name":"agent-collaboration-record"}
+{"t":0,"agent":"aa98321","agent_type":"unknown","event":"agent_stop","success":true}

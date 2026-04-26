@@ -203,8 +203,8 @@
     },
     {
       "path": "src/pages/debugger/DebuggerPage.tsx",
-      "accessCount": 22,
-      "lastAccessed": 1777213701120,
+      "accessCount": 24,
+      "lastAccessed": 1777245007764,
       "type": "file"
     },
     {
@@ -221,8 +221,8 @@
     },
     {
       "path": "src/widgets/layouts/components/Header.tsx",
-      "accessCount": 15,
-      "lastAccessed": 1777169400853,
+      "accessCount": 16,
+      "lastAccessed": 1777243215701,
       "type": "file"
     },
     {
@@ -239,14 +239,14 @@
     },
     {
       "path": "src/widgets/layouts/ui/RootLayout.tsx",
-      "accessCount": 11,
-      "lastAccessed": 1777168302613,
+      "accessCount": 12,
+      "lastAccessed": 1777243211622,
       "type": "file"
     },
     {
       "path": "src/app/routes/Routes.tsx",
-      "accessCount": 9,
-      "lastAccessed": 1777213701402,
+      "accessCount": 10,
+      "lastAccessed": 1777243216052,
       "type": "file"
     },
     {
@@ -256,15 +256,15 @@
       "type": "file"
     },
     {
-      "path": ".claude/skills/agent-collaboration-record/SKILL.md",
-      "accessCount": 5,
-      "lastAccessed": 1777126677084,
+      "path": "src/widgets/layouts/components/Sidebar.tsx",
+      "accessCount": 6,
+      "lastAccessed": 1777243215421,
       "type": "file"
     },
     {
-      "path": "src/widgets/layouts/components/Sidebar.tsx",
+      "path": ".claude/skills/agent-collaboration-record/SKILL.md",
       "accessCount": 5,
-      "lastAccessed": 1777166431302,
+      "lastAccessed": 1777126677084,
       "type": "file"
     },
     {
@@ -335,14 +335,14 @@
     },
     {
       "path": "src/widgets/layouts/ui/PageLayout.tsx",
-      "accessCount": 2,
-      "lastAccessed": 1777139161469,
+      "accessCount": 3,
+      "lastAccessed": 1777243211941,
       "type": "file"
     },
     {
       "path": "panda.config.ts",
-      "accessCount": 2,
-      "lastAccessed": 1777168447437,
+      "accessCount": 3,
+      "lastAccessed": 1777243354377,
       "type": "file"
     },
     {
