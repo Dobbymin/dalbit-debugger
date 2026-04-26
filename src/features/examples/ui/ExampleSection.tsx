@@ -2,8 +2,8 @@ import { CodeIcon } from "@/shared";
 
 import { css } from "../../../../styled-system/css";
 import { icon } from "../../../../styled-system/recipes";
-import { ExampleCard } from "../components";
-import { EXAMPLE_SECTIONS } from "../constants";
+import { ExampleCard } from "../_components";
+import { EXAMPLE_SECTIONS } from "../_constants";
 
 type Props = {
   onOpenExample: (code: string) => void;

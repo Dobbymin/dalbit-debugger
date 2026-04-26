@@ -22,7 +22,7 @@ export const FEATURE_CARDS = [
 ] as const;
 
 export const EDITOR_LINES = [
-  { no: 1, code: "나이 : 20", isActive: false, indent: 0 },
+  { no: 1, code: "나이 = 20", isActive: false, indent: 0 },
   { no: 2, code: "만약 나이 >= 18 이면", isActive: true, indent: 0 },
   { no: 3, code: '"성인입니다" 보여주기', isActive: false, indent: 1 },
   { no: 4, code: "아니면", isActive: false, indent: 0 },
