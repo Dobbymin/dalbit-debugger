@@ -148,13 +148,7 @@ export default function MainPage() {
                 },
               })}
             >
-              <PlayIcon
-                className={css({
-                  w: "30px",
-                  h: "30px",
-                  flexShrink: 0,
-                })}
-              />
+              <PlayIcon className={icon({ usage: "cta" })} />
               <span>디버깅 시작하기</span>
             </Link>
 
