@@ -2,14 +2,15 @@ import { Outlet, useLocation } from "react-router-dom";
 
 import { ROUTE_PATHS } from "@/shared";
 
+import { css } from "../../../../styled-system/css";
 import { Header } from "../components";
 
-type ActiveTab = "Debugger" | "Library" | "Documentation";
+type ActiveTab = "Debugger" | "Library";
 
-const ROUTE_HEADER_CONFIG: Record<string, { activeTab?: ActiveTab; sticky?: boolean; showSearch?: boolean }> = {
-  [ROUTE_PATHS.MAIN]: { activeTab: "Debugger", sticky: true },
+const ROUTE_HEADER_CONFIG: Record<string, { activeTab?: ActiveTab; sticky?: boolean }> = {
+  [ROUTE_PATHS.MAIN]: { sticky: true },
   [ROUTE_PATHS.DEBUGGER]: { activeTab: "Debugger" },
-  [ROUTE_PATHS.EXAMPLES]: { activeTab: "Library", showSearch: true },
+  [ROUTE_PATHS.EXAMPLES]: { activeTab: "Library" },
 };
 
 export const RootLayout = () => {
@@ -17,9 +18,24 @@ export const RootLayout = () => {
   const headerProps = ROUTE_HEADER_CONFIG[pathname] ?? {};
 
   return (
-    <div>
+    <div
+      className={css({
+        display: "flex",
+        flexDirection: "column",
+        height: "100dvh",
+      })}
+    >
       <Header {...headerProps} />
-      <Outlet />
+      <div
+        className={css({
+          flex: 1,
+          minHeight: 0,
+          display: "flex",
+          flexDirection: "column",
+        })}
+      >
+        <Outlet />
+      </div>
     </div>
   );
 };
