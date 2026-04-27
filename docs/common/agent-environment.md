@@ -72,11 +72,53 @@
 
 ---
 
-## 3. MCP 서버 및 플러그인
+## 3. ECC 하네스 엔지니어링 프레임워크
+
+### 개요
+
+이 프로젝트는 **ECC(everything-claude-code)**([https://github.com/affaan-m/everything-claude-code](https://github.com/affaan-m/everything-claude-code)) 오픈소스 하네스 엔지니어링 프레임워크를 활용합니다.
+
+ECC는 Claude Code를 단순한 코드 생성 도구에서 **맥락 인식·자동 검증·지식 축적·병렬 에이전트 실행**이 가능한 체계적인 개발 파트너로 확장하는 프레임워크입니다.
+
+### ECC가 제공하는 핵심 구성 요소
+
+| 구성 요소 | 설명 | 이 프로젝트에서의 활용 |
+|-----------|------|----------------------|
+| **MCP 플러그인** | 외부 서비스와 Claude Code를 연결하는 MCP 서버 모음 | Context7, Playwright, GitHub, Sequential Thinking, Memory, Exa |
+| **ECC 스킬** | 반복 작업을 자동화하는 `/skill` 명령어 컬렉션 | `agent-collaboration-record`, `git-workflow-specialist`, `pr-writer`, `design-system` 등 |
+| **훅(Hooks)** | 도구 실행 전후에 자동으로 실행되는 쉘 명령 | Read/Edit 작업 후 자동 검증, 코드 품질 체크 |
+| **프로젝트 메모리** | 세션 간에 지식을 유지하는 영구 메모리 시스템 | 아키텍처 결정사항, 컨벤션, 핫 패스 등 지속 유지 |
+| **oh-my-claudecode** | LSP 연동, 세션 관리 등 추가 생산성 도구 | LSP 진단, 프로젝트 메모리, 세션 관리 |
+
+### ECC 스킬 활용 내역
+
+이 프로젝트에서 사용한 ECC 스킬:
+
+- **`agent-collaboration-record`**: 에이전트 작업 완료 후 `docs/log/agents/` 에 표준화된 기록 자동 생성
+- **`git-workflow-specialist`**: 커밋 단위 분리, 커밋 메시지 작성, 브랜치 관리
+- **`pr-writer`**: PR 설명 자동 생성 (Summary, Changes, Test plan 포함)
+- **`design-system`**: 모바일 반응형 디자인 감사 및 개선 방안 도출
+- **`ecc:save-session`** / **`ecc:resume-session`**: 컨텍스트 압축 전 세션 상태 저장 및 복원
+- **`ecc:code-review`**: 미커밋 변경사항 코드 리뷰
+
+### ECC 설치 및 구성
+
+```bash
+# ECC 설치 (이미 구성됨)
+# ~/.claude/plugins/cache/ecc/ 에 설치된 스킬들
+# settings.json 에 훅 및 권한 설정
+
+# oh-my-claudecode 설치
+omc update  # 최신 버전으로 업데이트
+```
+
+---
+
+## 4. MCP 서버 및 플러그인
 
 이 프로젝트에서는 다음의 MCP 서버 및 Claude Code 플러그인을 활용합니다.
 
-### 3.1 Context7 (`mcp__plugin_ecc_context7`)
+### 4.1 Context7 (`mcp__plugin_ecc_context7`)
 **용도**: 최신 라이브러리 문서 조회 및 코드 예제 검색
 
 **활용 사례**:
@@ -90,7 +132,7 @@
 
 ---
 
-### 3.2 GitHub (`mcp__plugin_ecc_github`)
+### 4.2 GitHub (`mcp__plugin_ecc_github`)
 **용도**: PR 생성, 이슈 관리, 저장소 작업
 
 **활용 사례**:
@@ -106,7 +148,7 @@
 
 ---
 
-### 3.3 Playwright (`mcp__plugin_ecc_playwright`)
+### 4.3 Playwright (`mcp__plugin_ecc_playwright`)
 **용도**: 브라우저 자동화를 통한 UI 검증
 
 **활용 사례**:
@@ -123,7 +165,7 @@
 
 ---
 
-### 3.4 Sequential Thinking (`mcp__plugin_ecc_sequential-thinking`)
+### 4.4 Sequential Thinking (`mcp__plugin_ecc_sequential-thinking`)
 **용도**: 복잡한 문제 단계적 분석 및 해결
 
 **활용 사례**:
@@ -137,7 +179,7 @@
 
 ---
 
-### 3.5 Notion (`mcp__claude_ai_Notion`)
+### 4.5 Notion (`mcp__claude_ai_Notion`)
 **용도**: 노션 워크스페이스 연동 (문서, 데이터베이스 관리)
 
 **활용 사례**:
@@ -152,7 +194,7 @@
 
 ---
 
-### 3.6 oh-my-claudecode (`mcp__plugin_oh-my-claudecode_t`)
+### 4.6 oh-my-claudecode (`mcp__plugin_oh-my-claudecode_t`)
 **용도**: 프로젝트 메모리, LSP 진단, 세션 관리
 
 **주요 모듈**:
@@ -186,7 +228,7 @@
 
 ---
 
-## 4. 에이전트 협업 스킬
+## 5. 에이전트 협업 스킬
 
 ### agent-collaboration-record
 **용도**: 에이전트 작업 기록 자동화
@@ -231,9 +273,9 @@
 
 ---
 
-## 5. 에이전트 운용 방식
+## 6. 에이전트 운용 방식
 
-### 5.1 작업 흐름
+### 6.1 작업 흐름
 
 1. **작업 분석**
    - CLAUDE.md 숙지
@@ -262,7 +304,7 @@
 
 ---
 
-### 5.2 병렬 실행 예시
+### 6.2 병렬 실행 예시
 
 **시나리오**: 기능 구현 + 코드 품질 동시 진행
 
@@ -282,7 +324,7 @@
 
 ---
 
-## 6. 프로젝트 메모리 구조
+## 7. 프로젝트 메모리 구조
 
 oh-my-claudecode의 프로젝트 메모리는 다음 섹션으로 구성됩니다.
 
@@ -297,9 +339,9 @@ oh-my-claudecode의 프로젝트 메모리는 다음 섹션으로 구성됩니�
 
 ---
 
-## 7. 검증 및 모니터링
+## 8. 검증 및 모니터링
 
-### 7.1 로컬 개발 검증
+### 8.1 로컬 개발 검증
 
 ```bash
 # 타입 검사
@@ -313,7 +355,7 @@ pnpm run format
 pnpm dev
 ```
 
-### 7.2 브라우저 검증 (Playwright)
+### 8.2 브라우저 검증 (Playwright)
 
 ```bash
 # 로컬 서버 (localhost:5173) 접속 후 UI 검증
@@ -322,7 +364,7 @@ pnpm dev
 - 에러 처리 및 에러 바운더리
 ```
 
-### 7.3 협업 기록 검증
+### 8.3 협업 기록 검증
 
 생성된 기록 파일이 다음을 포함하는지 확인:
 - 사용 도구 명시
@@ -332,11 +374,18 @@ pnpm dev
 
 ---
 
-## 8. 참고 링크
+## 9. 참고 링크
+
+### 프로젝트
+- GitHub 저장소: https://github.com/Dobbymin/dalbit-debugger
+- 배포 URL: https://dalbit.dobbymin.cloud/
 
 ### 프로젝트 내부 문서
 - FSD 규칙: `docs/rule/fsd-rule.md`
 - 에이전트 협업 기록: `docs/log/agents/`
+
+### 에이전트 하네스
+- **ECC (everything-claude-code)**: https://github.com/affaan-m/everything-claude-code
 
 ### 외부 문서
 - **달빛약속**: https://dalbit-yaksok.postica.app
@@ -354,7 +403,7 @@ pnpm dev
 
 ---
 
-## 9. 일반 질문 및 답변
+## 10. 일반 질문 및 답변
 
 ### Q: 새로운 에이전트가 시작할 때 먼저 읽어야 할 문서는?
 **A**:
@@ -386,7 +435,7 @@ pnpm patch-commit
 
 ---
 
-## 10. 버전 정보
+## 11. 버전 정보
 
 | 항목 | 버전 | 비고 |
 |------|------|------|
@@ -399,4 +448,4 @@ pnpm patch-commit
 
 ---
 
-마지막 업데이트: 2026-04-26
+마지막 업데이트: 2026-04-27
